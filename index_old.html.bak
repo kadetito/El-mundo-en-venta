@@ -1,0 +1,274 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Castellers de Lleida App oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.3.0-beta.1.css" />
+<script src="jquery.min.js"></script>
+<script src="jquery.mobile-1.3.0-beta.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils.css" />
+<style>.ui-page{background:#B7283E !important;}</style>
+</head>
+<body> 
+	<!--login-->
+<div data-role="page" id="inicio">
+	<div data-role="content">	
+		<p style="text-align:center"><img src="img/logotipo-castellers.svg" alt="" title="" style="width:50%;" /></p>
+		<form id="formulario" >
+      	<p><label> Usuario </label>
+      			<input type="email" data-role="none" placeholder="Escriu el teu e-mail" class="myinput" id="nombredeusuario"  name="nombredeusuario"></p>
+      	<p><label> Password </label>
+     			<input type="password" id="clave" placeholder="Escriu el teu password" data-role="none" class="myinput"  name="clave" ></p>
+  <div class=ui-grid-a>
+ <div class=ui-block-a><input type="submit" data-role="button" class="botoblau" value="Login" id="botonLogin"></div>
+ <div class=ui-block-b><a href="#alta" data-transition="slidefade"><input type="button" data-role="button"  class="botogroc" value="Inscribirse" /></a></div>
+</div>  		
+</form>	
+<p align="center"><a href="#remember" data-transition="pop">No recuerdo mi contrase&ntilde;a</a></p>	
+</div>
+</div>
+	<!--login-->
+
+
+	<!--registre-->
+<div data-role="page" id="alta">
+	<div data-role="content">
+				<p style="text-align:center"><img src="img/logotipo-castellers.svg" alt="" title="" style="width:20%;" /></p>
+	<h4>Para mejorar el uso de esta aplicaci&oacute;n, tu experiencia ser&aacute; mejor si nos facilitas algunos datos...</h4>		
+	<div id="register_form">
+	<form name="register" method="post" action="">
+		
+		<p><label for="nom">Tu nombre:</label>
+		<input type="text" placeholder="Escribe aqu&iacute; tu nombre" data-role="none" class="myinput" id="nom" name="nom" required="required" />
+		<label class="error" for="nom" id="nom_error">Deberias indicar tu nombre, te llamaremos cuando se acepte tu oferta</label></p>
+		
+		
+		<p><label for="cognom">Tus Apellidos:</label>
+		<input type="text" placeholder="Escribe aqu&iacute; tus apellidos" data-role="none" class="myinput" id="cognom" name="cognom" required="required"/>
+		<label class="error" for="cognom" id="cognom_error">Deberias indicar tus apellidos, te llamaremos cuando se acepte tu oferta</label></p>		
+
+		<p><label for="telefon">Tu Tel&eacute;fono:</label>
+		<input type="tel" placeholder="Escribe aqu&iacute; tu n&uacute;mero de tel&eacute;fono" data-role="none" class="myinput" id="telefon" name="telefon" required="required"/>
+		<label class="error" for="telefon" id="telefon_error">Necesitamos tener un tel&eacute;fono de contacto, te llamaremos cuando se acepte tu oferta</label></p>		
+		
+		
+		<p><label for="nombre">E-mail:</label>
+		<input type="email" placeholder="Escribe un e-mail que sea v&aacute;lido" data-role="none" class="myinput" id="name" name="name" />
+		<label class="error" for="name" id="name_error">Debes indicarnos un E-mail v&aacute;lido, ser&aacute; tu c&oacute;digo de usuario para acceder a la aplicaci&oacute;n y donde te mandaremos las notificaciones</label></p>
+		<p><label for="password">Elige una contrase&ntilde;a:</label>
+		<input type="password" placeholder="Escribe aqu&i una contrase&ntilde;a, de como m&iacute;nimo 5 car&aacute;cteres y que tenga como m&iacute;nimo una letra y una cifra" data-role="none" class="myinput" id="password" name="password" />
+	<label class="error" for="pass"  id="pass_error">Por favor, indica una contrase&ntilde;a para podert conectar otro d&iacute;a a esta aplicaci&oacute;n</label></p>	
+  <div class="ui-grid-a">
+ <div class="ui-block-a"><input name="submit" type="submit" value="Reg&iacute;strarte" id="enviar-btn" data-role="button" class="botoblau" /></div>
+ <div class="ui-block-b"><a href="#inicio" data-transition="slidefade"><input type="button" data-role="button"  class="botogroc" value="Con&eacute;ctate" /></a></div>
+</div>  				
+	</form>
+</div>	
+	</div>
+</div>
+	<!--registre-->
+
+
+
+	<!--recuperar-->
+<div data-role="page" id="remember">
+	<div data-role="content">
+	<p style="text-align:center"><img src="img/logotipo-castellers.svg" alt="" title="" style="width:20%;" /></p>
+	<h4>Para recuperar tus datos, por favor, ind&iacute;canos tu correo electr&oacute;nico y te los mandaremos</h4>	
+	<div id="remember_form">
+<form name="nuevo_empleado" action="" onsubmit="enviarDatosEmpleado(); return false">
+		<p><label for="nombre">E-mail:</label>
+		<input type="email"  data-role="none" class="myinput" id="emailrecuperar" name="emailrecuperar" required="required" />
+	
+  <div class="ui-grid-a">
+ <div class="ui-block-a"><input name="submit" type="submit" value="Recuperar" id="enviar-recuperar" data-role="button" class="botoblau" /></div>
+ <div class="ui-block-b"><a href="#inicio" data-transition="slidefade"><input type="button" data-role="button"  class="botogroc" value="Login" /></a></div>
+</div>  
+	
+	</p>
+	</form>
+</div>	
+	</div>
+</div>
+	<!--recuperar-->
+
+
+
+
+
+<script>
+	
+	//LOGIN
+$('#formulario').submit(function() { 
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+	
+  	archivoValidacion = "http://192.168.1.48/295_elmundoenventa/validacion_de_datos.php?jsoncallback=?"
+
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+		
+		//alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.nom + "\n" +respuestaServer.cognom)
+		
+		if(respuestaServer.validacion == "ok"){
+		  
+		 	/// si la validacion es correcta, muestra la pantalla "home"
+			//$.mobile.changePage("segunda.html");	  
+			window.location.href="segunda.html";
+			localStorage.setItem('respuestaServer.validacion', respuestaServer.validacion);                            	
+			localStorage.setItem('respuestaServer.nom', respuestaServer.nom);
+			localStorage.setItem('respuestaServer.cognom', respuestaServer.cognom);
+			localStorage.setItem('respuestaServer.ide', respuestaServer.ide);
+			localStorage.setItem('datosUsuario', datosUsuario);
+			localStorage.setItem('datosPassword', datosPassword);
+		}else{
+		  
+          alert('Les dades facilitades no son correctes!!');
+		}
+  
+	})
+	return false;
+})
+
+
+
+//ALTA
+
+$(document).ready(function() {
+
+	$('.error').hide();
+
+	$("#enviar-btn").click(function() {
+
+		//Obtenemos el valor del campo nombre
+		var name = $("input#name").val();
+		//Validamos el campo nombre, simplemente miramos que no esté vacío
+		if (name == "") {
+			$("label#name_error").show();
+			$("input#name").focus();
+			return false;
+		}
+
+		//Obtenemos el valor del campo password
+		var password = $("input#password").val();
+
+		//Validamos el campo password, simplemente miramos que no esté vacío
+		if (password == "") {
+			$("label#pass_error").show();
+			$("input#password").focus();
+			return false;
+		}
+
+
+
+		//Obtenemos el valor del campo password
+		var nom = $("input#nom").val();
+
+		//Validamos el campo password, simplemente miramos que no esté vacío
+		if (nom == "") {
+			$("label#nom_error").show();
+			$("input#nom").focus();
+			return false;
+		}
+		
+		
+		//Obtenemos el valor del campo password
+		var cognom = $("input#cognom").val();
+
+		//Validamos el campo password, simplemente miramos que no esté vacío
+		if (cognom == "") {
+			$("label#cognom_error").show();
+			$("input#cognom").focus();
+			return false;
+		}		
+		
+		
+		
+		
+		//Construimos la variable que se guardará en el data del Ajax para pasar al archivo php que procesará los datos
+		var dataString = 'name=' + name + '&password=' + password + '&nom=' + nom + '&cognom=' + cognom + '&telefon=' + telefon;
+
+		$.ajax({
+			type: "POST",
+			url: "http://192.168.1.48/295_elmundoenventa/alta.php?"+dataString,
+			data: dataString,
+			success: function() {
+		    	$('#register_form').html("<div id='message'></div>");
+		    	
+		        $('#message').html("<h2 style=color:#ffffff>¡Ya te has registrado! Recibir&aacute;s un e-mail para confirmar que el email que nos has indicado sea realmente tuyo, activar tu cuenta y poderte conectar (si no encuentras el correo, mira en la carpeta de correo no deseado).</h2>")
+		   
+		      
+		      .hide()
+		        .fadeIn(1500, function() {
+		        	
+		        	
+					$('#message').append("<p class='text-center'><a href='index.html'><button data-role='button' class='btn'>Con&eacute;ctate</button></a></p>");
+		        });
+		    }
+		});
+		return false;
+	});
+});
+
+//runOnLoad(function(){
+//	$("input#name").select().focus();
+//});
+
+
+
+
+
+
+
+
+
+//RECUPERAR	
+
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function enviarDatosEmpleado(){
+ 
+
+  divResultado = document.getElementById('resultado');
+  emailrec=document.nuevo_empleado.emailrecuperar.value;
+
+
+  ajax=objetoAjax();
+ 
+  ajax.open("POST", "http://192.168.1.48/295_elmundoenventa/recuperar.php",true);
+  ajax.onreadystatechange=function() {
+  	if (ajax.readyState==4) {
+		divResultado.innerHTML = ajax.responseText
+		
+	}
+	alert("Hemos enviado un correo con tus datos. Lo recibiras solo si ya te habías inscrito con anterioridad. Revisalo y registrate");
+ }
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("emailrecuperar="+emailrec)
+}
+ 
+	
+</script>
+</body>
+</html>

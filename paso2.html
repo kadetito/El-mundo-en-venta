@@ -1,0 +1,402 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/app.css" />
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+
+hr {margin:0px;padding:0px;}
+</style>
+</head>
+
+<body id="main"> 
+<div class="micargador" id="micargador">
+<div class="loader" id="loader">
+</div>
+</div>
+<div id="wrapper" class="toggled">
+      
+ <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+           	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/home-1.png" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/user-6.png" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+<li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/error.png" alt="Desconectar" title="Desconectar" /></a></li>
+        
+       
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+    <div class="container-fluid">      
+    
+<div id="page-content-wrapper"> 	
+
+
+	
+	
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/images/logotipointerior.png" alt="" title="" style="width:100%;" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="http://elmundo.webexpo.es/images/user-4.png" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="http://elmundo.webexpo.es/images/settings-5.png" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+
+
+</div>  
+
+
+
+<form action="paso3.html" method="POST">
+	
+<!--AFEGIT RAFA-->
+<div class="row margbottomn">
+<div class="col-xs-4">
+	<div class="freshlittle text-center">
+<a href="segunda.html"><img  class="imatgecateg"  src="" title="" id="CatBase" style="margin-top: 16px" />
+</a>
+  </div>
+<div id="TextBase" style="text-align: center"></div>
+</div>
+<div class="col-xs-4"></div>
+<div class="col-xs-4 text-right"><a href="javascript:history.go(-1);"><img   src="http://elmundo.webexpo.es/arrow-bold-left-ios-7-interface-symbol_318-34824.png" title=""  style="margin-top: 16px" /></a></div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-12 text-center">
+		<hr />
+	</div>
+</div>
+
+	
+	
+
+</form>
+
+	
+	
+
+<div id="parametre"></div>
+<div class="row" id="botonesCategorias">					
+<!-- Aqui van los botones de categorias -->
+</div>
+
+
+
+<div class="row">
+	<div class="col-xs-4 text-center"></div>
+  <div class="col-xs-4 text-center"><div class="freshlittle text-center" style="margin:0 auto !important;"><a href="segunda.html"><img src="http://elmundo.webexpo.es/img/340.png" alt="atras" /></a></div></div>
+	<div class="col-xs-4 text-center"></div>
+</div>
+<div style="height:150px;"></div>	
+
+<!--
+<div class="thumbnail marginadorsupba">
+<div class="row ">					
+<div class="col-xs-12 text-right">
+<form accept-charset="utf-8" id="dscto" method="POST">	
+<div class="input-group">
+<input name="busqueda" id="busqueda" value="" placeholder="Buscar" autocomplete="off" class="form-control"  onKeyUp="buscar();" />
+   <span class="input-group-btn">
+        <div class="btn cdeed"><img class="alzadalupa" src="http://elmundo.webexpo.es/images/search.png" alt="search" /></div>
+   </span>
+</div>
+</form>
+</div>
+
+
+
+
+
+</div>						
+</div> 
+<div id="resultadoBusqueda"></div>
+--> 
+
+<div id="div_Result2"></div>
+
+</div>
+<div id="bannerinferior" style="position: fixed; z-index:999;bottom: 0px"></div>
+          
+ 
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	// Recuperamos datos del sessionStorage
+	var datosUsuario  = sessionStorage.getItem('datosUsuario');
+	var datosPassword = sessionStorage.getItem('datosPassword');
+	var parametreBase = sessionStorage.getItem('CategoriaBase'); // Recuperamos en qué categoría estamos	
+
+	if(!datosUsuario || !datosPassword) { // Si no tiene definidos los códigos de usuario/password, vuelve a index
+		window.location.replace('index.html');
+	}
+
+	if(!parametreBase) { // Si no tiene definida la categoria base, vuelve a paso1
+		window.location.replace('segunda.html');
+	}
+	
+//	$("#parametre").html("parametre:" + parametreBase);	// cuando nos haga falta, podemos mostrar le valor.
+
+// Inicialiamos la pantalla
+// Si no tiene registrado usuario y contraseña válido, retorna a index.html
+// recolecta los valores que inserto el usuario
+	
+  	archivoValidacion = "http://elmundo.webexpo.es/procesos.php?jsoncallback=?";
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword, paso:2, Base:parametreBase})
+	.done(function(respuestaServer) {
+		if(respuestaServer.validacion != "ok") {
+			// Si no pasa la comprobación de usuario / contraseña, vuelve a la pantalla inicial
+			window.location.replace('index.html');
+		}
+		else {
+		// elegimos una imagen de fondo al azar
+			var randomID = new Date().getTime();
+			
+			
+	// en segunda.php, se aplica sobre body, pero hace dos refrescos, uno ajustando ancho y otro ajustando alto. A mejorar		
+			$('body').css({
+				"background-image": "url('http://elmundo.webexpo.es/" + respuestaServer.ImagenDeFondo + "?r=" + randomID+ "')",
+				"background-repeat": "repeat",
+				"background-position": "top center"
+				});
+
+			
+	// elegimos un anuncio de pie al azar	
+			$("#bannerinferior").html('<img style="width:100%" src="' + respuestaServer.BannerPublicitario + '">');
+
+	// Recuperem descripció de la primera categoria
+			$.each(respuestaServer.Base, function(id, nombre){
+				$("#CatBase").attr("title", id);
+				$("#CatBase").attr("src", nombre);
+				$("#TextBase").html(id);
+				});
+			
+	// recorremos el primer nivel de categorias, y creamos los botonoes
+			$.each(respuestaServer.Botones, function(id, datos){
+
+				// Si es la primera categoria, la registrem com a valor inicial
+				if (sessionStorage.getItem('CategoriaNivel1')== 0)	
+					sessionStorage.setItem('CategoriaNivel1', id);
+
+				// Botones con imagen
+				var newButton = '<div class="col-xs-6"><h3>'+ datos.Title +'</h3><div class="text-center fresh obi"><a id="Cat'+id+'" href="paso3.html"><img class="imatgecateg" src="'+ datos.Image +'" alt="'+datos.Title +'" title="'+ datos.Title +'"  /></a></div></div>';
+				$(newButton).appendTo("#botonesCategorias");	
+
+			// Si pulsamos el boton, registramos en sessionStorage			
+				$("#Cat"+id).click(function(){
+					sessionStorage.setItem('CategoriaNivel1', id);
+				});
+			});
+		}
+	});
+ 	
+	
+	// Incializamos el sessionStorage	
+	sessionStorage.setItem('CategoriaNivel1', 0);		
+
+	});
+</script>
+				
+         
+          
+         
+<script type="text/javascript">
+
+$(document).ready(function(){
+                    
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+
+                   
+
+			                       
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+
+	
+ 		
+
+
+
+
+
+<script>
+	$(document).ready(function() {
+    $("#resultadoBusqueda").html('');
+});
+
+function buscar() {
+    var textoBusqueda = $("input#busqueda").val();
+ 
+     if (textoBusqueda != "") {
+        $.post("http://elmundo.webexpo.es/buscar.php", {valorBusqueda: textoBusqueda}, function(mensaje) {
+            $("#resultadoBusqueda").html(mensaje);
+         }); 
+     } else { 
+        $("#resultadoBusqueda").html('');
+        };
+};
+</script>
+
+<script>
+$(document).ready(function() {
+    $("#dscto").keypress(function(e) {
+        if (e.which == 13) {
+            return false;
+        }
+    });
+});
+</script>
+
+
+<script>
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function MostrarConsulta(datos){
+   divResultado = document.getElementById('resultado');
+   ajax=objetoAjax();
+   ajax.open("GET", datos);
+   ajax.onreadystatechange=function() {
+      if (ajax.readyState==4) {
+         divResultado.innerHTML = ajax.responseText
+      }
+   }
+   ajax.send(null)
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+$('#detallID').submit(function(){
+
+
+  var postData = $(this).serialize();
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData,
+
+      url: 'http://elmundo.webexpo.es/detall.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+</script>
+
+<script>
+	 $('#micargador').addClass("hide-loader");
+</script>
+ 
+	</div>
+</body>
+</html>

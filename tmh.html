@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html>
+<head>
+<title>HTML5 localStorage Demo</title>
+
+<meta name="viewport" content="width=device-width"/> 
+<meta charset="UTF-8"> 
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="style.css">
+<link href="http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic|Pacifico" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+</head>
+<body>
+	
+	
+<form id="paso5" method="post" action="">
+ 
+    <input type="text" name="precio" id="precio" class="stored" value="" />
+    <textarea name="message" id="message" class="stored"></textarea>
+</form>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["precio"]) {
+            $('#precio').val(localStorage["precio"]);
+        }
+
+        if (localStorage["Explicacion"]) {
+            $('#Explicacion').val(localStorage["Explicacion"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+    localStorage[$(this).attr('Explicacion')] = $(this).val();
+});
+
+$('#paso5').submit(function() {
+    localStorage.clear();
+});
+</script>
+</body>
+</html>

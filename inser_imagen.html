@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/app.css" />
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+    margin-top:10px;
+  }
+  .blah{padding-top:12px;}
+  .letnj{margin-bottom:15px;}
+</style>
+
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" >
+<div class="container">      
+
+<form id="paso4" runat="server" action="inser_imagen.html" onsubmit="return closeSelf()" method="GET">
+<div class="row" style="margin-top:-25px;">
+		<div class="col-md-12 text-center">
+			<p style="color:#000;font-size:10px;">Pulse para buscar la imagen en su dispositivo.</p>
+			<input accept="image/*" type="file" id="files" name="files[]" class="form-control letnj" capture/>
+			<output style="display:none;" id="list"></output>
+			<img style="height:80px;" id="blah" src="#" alt="" />
+		</div>		
+</div>
+<div class="row">
+		<div class="col-xs-12 text-center">
+			<button type="submit" name="paso4" class="btn btn-default massfh verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Cargar imagen</button>
+      <!--<a href="mis_subastas.html"><button class="btn btn-default massfh groddo"><i class="fa fa-bell fa-2x" aria-hidden="true"></i><br />Ver mis ofertas</button></a>-->
+		</div>
+</div>	
+</form>
+<script>
+ function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+        var imgs = sessionStorage.getItem('files');
+    }
+    $("#files").change(function(){
+        readURL(this);
+    });
+</script>
+
+ 
+
+</div>
+</div>
+          
+<script type="text/javascript">
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+			  // Render thumbnail.
+
+//		var span = document.createElement('span');
+//        span.innerHTML = ['<img class="thumb" src="http://elmundo.webexpo.es/', e.target.result,
+//                            '" title="', escape(theFile.name), '"/>'].join('');
+//        document.getElementById('list').insertBefore(span, null);
+
+// com que el camp input no permet "multiple", nomes hi haurà un fitxer	
+//		sessionStorage.setItem('imgData', e.target.result);
+			  
+			  // Ara reescalem la imatge
+
+			// Creem un element tipus IMG
+			var img = document.createElement('img');
+			img.src = e.target.result;
+
+			// hem de continuar quan img estigui carregada, sino img.width i img.height no estan encara valorats.	
+			img.onload = function () {
+
+				var MAX_WIDTH = 400;
+				var MAX_HEIGHT = 300;
+				var width = this.width;
+				var height = this.height;
+
+				if (width > height) {
+				  if (width > MAX_WIDTH) {
+					height *= MAX_WIDTH / width;
+					width = MAX_WIDTH;
+				  }
+				} else {
+				  if (height > MAX_HEIGHT) {
+					width *= MAX_HEIGHT / height;
+					height = MAX_HEIGHT;
+				  }
+				}
+
+				var canvas = document.createElement('canvas');
+				var ctx = canvas.getContext("2d");
+				canvas.width = width;
+				canvas.height = height;
+				ctx.drawImage(this, 0, 0, width, height);
+
+				
+				var dataurl = canvas.toDataURL("image/png");
+
+				// reescalada	
+
+
+				document.getElementById('list').insertBefore(canvas, null);
+
+				// com que el camp input no permet "multiple", nomes hi haurà un fitxer	
+
+				sessionStorage.setItem('imgData', dataurl);
+
+
+			};
+        };			
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+</script>
+
+	
+    		
+
+<script type="text/javascript"> 
+
+    function closeSelf() {
+        parent.location.reload();
+      }
+</script>
+
+
+
+
+
+
+</body>
+</html>

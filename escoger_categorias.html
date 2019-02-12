@@ -1,0 +1,614 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Escoger categorias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/appnw.css" />
+<style>
+	.botonredondo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;text-align:center;
+  background-color:red;color:#ffffff;
+  border: 0px solid red;
+}
+.MyClass{background-color:grey;}
+	.botoncuadrado {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;text-align:center;
+  background-color:#000000;;color:#ffffff;
+  border: 0px solid red;
+}
+.MyClassCua{background-color:grey;}
+
+.blackok{color:#000;}
+</style>
+</head>
+
+<body> 
+
+<div id="wrapper" class="toggled">
+   <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+        	
+                                   
+
+           	
+           	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/home-1.png" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/user-6.png" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+<li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/error.png" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        
+        
+        
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+    
+          
+   
+
+<div id="page-content-wrapper"> 	
+
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/images/logotipointerior.png" alt="" title="" class="logotiposuperior" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="http://elmundo.webexpo.es/images/user-4.png" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="http://elmundo.webexpo.es/images/settings-5.png" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+</div>      
+
+
+
+<div class="container-fluid" >   
+<div class="row">
+	<div class="col-md-12 text-center mtop3335">
+
+		<h3>Escoge a qu&eacute; categor&iacute;as quieres inscribirte</h3>
+		<h5>Esta inscripci&oacute;n a&ntilde;adir&aacute; <span id="ampliaperiodo"></span> meses a tus subscripciones actuales.</h5>
+	  <h5>Cambiar a </h5>
+	  
+	<div class="row">	
+<ul class="list-inline">
+	<li></li>
+	<li><input type="button" class="botonredondo" name="periodo" id="cambiarperiodo1" value="1 mes" /></li>
+	<li><input type="button" class="botonredondo" name="periodo" id="cambiarperiodo3" value="3 meses" /></li>
+	<li><input type="button" class="botonredondo" name="periodo" id="cambiarperiodo6" value="6 meses" /></li>
+	<li><input type="button" class="botonredondo" name="periodo" id="cambiarperiodo12" value="12 meses" /></li>
+	<li></li>
+</ul>
+
+	</div>
+		
+<h2 class="text-right">Total : <span id="Total">0.00</span> &euro; </h2>
+		
+
+
+</div>
+</div>
+
+
+
+<div class="row">	
+<div class="col-md-12">	
+
+<form action="almacenar.html" method="POST" id="paso6">
+
+
+	<div id="texte"></div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<table class="table table-striped">
+					<thead>
+						<tr>
+				
+							<th  style="width:80" class="text-center"></th>
+							<th  style="width:100" class="text-left">Categor&iacute;a</th>
+							<th  style="width:35" class="text-left">Exp.</th>
+							<th  style="width:45" class="text-center">Precio</th>
+						</tr>
+					</thead>
+					
+
+					<tbody id="mostrarproductos">
+					</tbody>
+				</table>
+				
+				<h2 class="text-right">Total : <span id="Total2">0.00</span> &euro; </h2>
+			</div>
+		</div>	
+
+
+
+
+
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="text-center"><button type="submit" name="paso4" class="btn btn-default massfh2 verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i>Pagar</button></div>
+		</div>	
+		<div class="col-xs-6">
+			
+<div class="text-center"><a class="btn btn-default massfh2 magentt" href="professionals.html" ><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i> Volver</a></div>
+
+		
+		
+		
+		</div>	
+	</div>
+	
+	
+	
+	
+</form>
+
+
+</div>	
+</div>	
+	
+	
+	<div style="height:350px"></div>
+	
+	
+</div>
+</div>		
+
+
+          
+         
+<script type="text/javascript">
+
+function actualizaPeriodo(Periodo) {
+	
+	
+	
+	// guardamos periodo sleccionado
+	
+	sessionStorage.setItem('Periodo', Periodo);
+/*	document.getElementById("cambiarperiodo1").classList.add('MyClass');
+	if (Periodo == 1) $('#cambiarperiodo1').show(); else $('#cambiarperiodo1').show();
+	if (Periodo == 3) $('#cambiarperiodo3').show(); else $('#cambiarperiodo3').show();
+	if (Periodo == 6) $('#cambiarperiodo6').show(); else $('#cambiarperiodo6').show();
+	if (Periodo == 12) $('#cambiarperiodo12').show(); else $('#cambiarperiodo12').show();
+*/
+	
+  if (Periodo == 1) document.getElementById("cambiarperiodo1").classList.add('MyClass'); else if (Periodo != 1) document.getElementById("cambiarperiodo1").classList.remove('MyClass');
+	if (Periodo == 3) document.getElementById("cambiarperiodo3").classList.add('MyClass'); else if (Periodo != 3) document.getElementById("cambiarperiodo3").classList.remove('MyClass');
+	if (Periodo == 6) document.getElementById("cambiarperiodo6").classList.add('MyClass'); else if (Periodo != 6) document.getElementById("cambiarperiodo6").classList.remove('MyClass');
+	if (Periodo == 12)document.getElementById("cambiarperiodo12").classList.add('MyClass'); else if (Periodo != 12) document.getElementById("cambiarperiodo12").classList.remove('MyClass');
+
+	// Acualitzem el boton el periode
+	$("#ampliaperiodo").empty();
+	$("#ampliaperiodo").append(Periodo);
+
+ 	actualizaTablaDatos(Periodo);
+}
+	
+function actualizaTablaDatos (Periodo) {
+	
+	// Recupera los datos
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+	
+ 	var url = "http://elmundo.webexpo.es/profesionales.php?accion=listar&usuario=" + datosUsuario + "&password="+ datosPassword +"&periodo=" + Periodo;
+	$.getJSON(url, function (mensaje, resultado) {
+		if (resultado == 'success') {
+			if (mensaje.validacion == 'ok') {
+
+				var seleccionados = [];
+				// guardamos los valores anteriores
+				$(".botoncuadrado").each(function() {
+					if ($(this).attr('button-selected')=='selected') {
+						var id = $(this).attr('id').substring(4);
+						var CatCode = $(this).attr('category');
+						seleccionados[CatCode] = 1;			
+					}
+				});
+				
+				// cargamos de nuevo
+				$("#mostrarproductos").empty();
+				var Total = 0;
+				
+				$.each(mensaje.lista, function(ID, data) {
+					
+				//document.getElementById('chk_" + data.Id + "').classList.add('MyClassCua');		
+					
+					
+					// if (data.ExpireIn.length > 0)  // si no caducado
+
+					// Si ya estaba marcado, lo vuelvo a contar
+					// if (data.Id<20) alert(data.Id);
+					if (seleccionados[data.CategoryCode[1]]==1) {
+						var color = 'red';
+						var selected = 'selected';
+						Total = Total + Number(data.Price);
+					} else {
+						var color='black';
+						var selected = 'no';	
+					}
+
+					var newRow = "<tr class='success'><td class='videfech text-center'><button type='button' class='botoncuadrado' name='Categor' id='chk_" + data.Id + "' button-selected='"+ selected +"' style='background-color:"+ color +" !important;' category='"+data.CategoryCode[1]+"'><img class='thumb' style='display: block;margin: auto 0;width:60px !important;height:auto !important;border:0px;' src='"+data.Image+"' id='image_"+data.Id+"' /></button></td><td><h5 class='blackok'>"+data.Title+"</h5></td><td>"+data.ExpireIn+"</td><td>"+data.Price+"&euro;</td></tr>";
+		
+					$(newRow).appendTo("#mostrarproductos");
+
+					$("#chk_" + data.Id).click(function(){
+
+						if ($(this).attr('button-selected')=='no') {
+							var valor = Number($("#Total").html()) + Number(data.Price);
+							$("#Total").html(valor.toFixed(2));
+							$("#Total2").html(valor.toFixed(2));
+							$(this).attr('button-selected', 'selected');
+							$(this).css('background-color', 'red');
+						} else {
+							var valor = Number($("#Total").html()) - Number(data.Price);
+							$("#Total").html(valor.toFixed(2));
+							$("#Total2").html(valor.toFixed(2));
+							$(this).attr('button-selected', 'no');
+							$(this).css('background-color', 'black');
+						}
+					});	
+				});
+
+				$("#Total").html(Total.toFixed(2));
+				$("#Total2").html(Total.toFixed(2));
+
+				
+			} else {
+			alert ('La carga de datos ha producido un error y ha fallado. Error: ' + html_entity_decode(mensaje.mensaje, 'ENT_QUOTES') + '. El equipo técnico ha sido avisado para la revisión');
+			}
+		} else {
+			alert ('La carga de datos ha producido un error y ha fallado. El equipo técnico ha sido avisado para la revisión');
+		}
+	});
+	
+}	
+	
+	
+$(document).ready(function(){
+	
+	// leemos lo que nos esta pidiendo y lo guardamos en sessionStorage
+	var Nombre		= sessionStorage.getItem('Nombre');              
+	var Empresa		= sessionStorage.getItem('Empresa');
+	var NIF			= sessionStorage.getItem('NIF');
+	var Descripcion	= sessionStorage.getItem('Descripcion');
+	var Periodo	 	= sessionStorage.getItem('Periodo');
+	// Recupera los datos
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+	
+	// Si no esta inicialitzat, inicialitzem a 1
+	if (Periodo != 1 && Periodo != 3 && Periodo != 6 && Periodo != 12) {
+		Periodo = 1; 
+		sessionStorage.setItem('Periodo',1);
+	}
+	
+
+	
+	// Actualizamos precio y periodo
+//	$("#precio").attr('value', preu);
+//	switch (periodo) {
+//		case '3': $("#P3").prop('checked', true); $("#LP3").addClass("selected");break;
+	//	case '6': $("#P6").prop('checked', true); $("#LP6").addClass("selected");break;
+	//	case '12': $("#P12").prop('checked', true); $("#LP12").addClass("selected");break;
+	//	case '24': $("#P24").prop('checked', true); $("#LP24").addClass("selected");break;
+	//}
+
+
+
+
+
+	// Acualitzem el boton el periode
+	$("#ampliaperiodo").empty();
+	$("#ampliaperiodo").append(Periodo);
+	
+	// Omplim dades
+ 	actualizaTablaDatos(Periodo);
+
+	
+	// Definim el event
+	$("#cambiarperiodo1").click(function () {actualizaPeriodo(1)});
+	$("#cambiarperiodo3").click(function () {actualizaPeriodo(3)});
+	$("#cambiarperiodo6").click(function () {actualizaPeriodo(6)});
+	$("#cambiarperiodo12").click(function () {actualizaPeriodo(12)});
+
+	
+	// Definim la acció del Submit	
+
+	$("#paso6").submit(function () {
+	
+//	alert ('hola');
+	// Registrem la compra del associat i anem a la pantalla final
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+
+	var Nombre 		= sessionStorage.getItem('Nombre');
+	var Empresa 	= sessionStorage.getItem('Empresa');
+	var NIF 		= sessionStorage.getItem('NIF');
+	var Descripcio 	= sessionStorage.getItem('Descripcion');
+		
+	var total = Number($("#Total").html());
+		
+		
+	if (total == 0)
+		{
+		alert('Debe seleccionar alguna opción para completar el proceso de pago');
+		return false;	
+		}
+	else
+		{
+		
+		// Preparem la llista de les opcions triades	
+		var selector = "";	
+		$(".botoncuadrado").each(function() {
+			if ($(this).attr('button-selected')=='selected') {
+				id = $(this).attr('id').substring(4);
+				selector = selector + "-" + id;
+			}
+		});	
+// MODE AMB POST
+
+		postData = "&accion=crear&usuario=" + datosUsuario + "&password=" + datosPassword + "&nombre=" + Nombre + "&empresa=" + Empresa + "&nif=" + NIF + "&descripcio=" + Descripcio + "&selector=" + selector; 
+		
+		//alert (postData);
+			
+		var resultado = "";
+			
+		$.ajax({
+			  type: 'POST',
+			  dataType : "json",
+			  data: postData,
+			  url: 'http://elmundo.webexpo.es/profesionales.php',
+			  async : false,
+			  success: function(data){
+				  resultado = data;
+			  },
+			  error: function(xhr, ajaxOptions, thrownError){
+				  alert('Se ha producido un error: ' + xhr.status + " " + thrownError);
+				  return false;
+			  }
+		  });
+   
+		  if (resultado.validacion != 'ok')
+			  {
+			  alert('Se ha producido un error, ' + resultado.mensaje);
+			  return false;
+			  }
+		}
+	});	
+
+	definiciones_comunes();	
+	
+// Y lo siguiente ????
+	
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+ //if (response_estado==1){                           
+
+/* 
+
+$("#div_Result").html("<a href=\"index.html\" onClick=\"sessionStorage.clear(); return true;\" >"+response_nom+" "+response_cognom+" <img style=\"width:17px;float:right;margin-right:25px;margin-top:12px;\" src=\"icones/exit.svg\" alt=\"SORTIR\" title=\"SORTIR\" /></a>	 "	);
+                   
+
+			                       
+			                       
+	                               //una vez logeados mostramos el JSON del array recuperado de la bbdd
+                                      var url="http://elmundo.webexpo.es//rebote.php";
+			                           $("#div_Result2").html("");
+			                           $.getJSON(url,function(clientes){
+									   
+									   var contenido = "<form><input type='hidden' name='idusuari' id='idusuari' value='"+response_id+"'/>";
+									   
+									   var newRow =	"";
+									   									   
+			                           $.each(clientes, function(i,cliente){
+			                           newRow = newRow + 
+"<div class='thumbnail'><div class='row martup'><div class='col-xs-12'><div class='cropp'><img class='percent ' src=http://elmundo.webexpo.es//fotos/"+cliente.fotografia+" /></div></div><div class='col-xs-12 jshue'><h2>"+cliente.titol+"</h2><p class='datel'>"+cliente.data+" - "+cliente.hora+"</p>"+cliente.texte+"<p>&nbsp;</p><p>&nbsp;<input type='submit' name='detallID"+cliente.id+"' id='detallID"+cliente.id+"' value='"+cliente.id+"' /></p><p>&nbsp;</p></div></div></div>"                           
+			                           });
+									   contenido = contenido + newRow + "</form>";
+									   
+			                           $(contenido).appendTo("#div_Result2");
+			                           });	
+			                           
+			                           
+			                                                  
+//  } else {//si 0 porque no se pudo elimnar
+//    window.location.href = 'index.html';
+//}                            
+             
+*/
+		
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+
+	
+    		
+
+<script type="text/javascript"> 
+
+$('#closeapp').submit(function() {
+	 
+navigator.app.exitApp();
+
+});
+        
+ 
+
+</script>
+
+
+
+
+<script>
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function MostrarConsulta(datos){
+   divResultado = document.getElementById('resultado');
+   ajax=objetoAjax();
+   ajax.open("GET", datos);
+   ajax.onreadystatechange=function() {
+      if (ajax.readyState==4) {
+         divResultado.innerHTML = ajax.responseText
+      }
+   }
+   ajax.send(null)
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+$('#detallID').submit(function(){
+
+
+  var postData = $(this).serialize();
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData,
+
+      url: 'http://elmundo.webexpo.es//detall.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+
+/*	
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+*/
+
+
+</script>
+
+<script type="text/javascript">
+	$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+});
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

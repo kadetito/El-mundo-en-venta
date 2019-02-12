@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/app.css" />
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+</style>
+
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+</style>
+
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+    
+       	
+        	
+    <div class="container-fluid">      
+    
+<div id="page-content-wrapper"> 	
+
+
+
+
+</div>  
+
+	
+<div class="row">
+		<div class="col-md-12 text-center"><label for="">Elija una puntuaci&oacute;n en la experiencia de compra con este vendedor, siendo 1 la valoraci&oacute;n m&aacute;s baja. y 5 la m&aacute;s alta</label>
+			<div id="valorar">	
+			<span style ="font-size:50%;">(peor)</span> 1
+			<input type="radio" name="valoracion" value="1" style="height:.8em; width:1.2em;">
+			<input type="radio" name="valoracion" value="2" style="height:.8em; width:1.2em;">
+			<input type="radio" name="valoracion" value="3" style="height:.8em; width:1.2em;">
+			<input type="radio" name="valoracion" value="4" style="height:.8em; width:1.2em;">
+			<input type="radio" name="valoracion" value="5" style="height:.8em; width:1.2em;">
+				5 <span style ="font-size:50%;">(mejor)</span>
+			</div>	
+		</div>	
+			
+		<div class="col-md-12 text-center"><label for="">Ayude a la valoraci&oacute;n de este vendedor, comentando como ha sido la experiencia. Recuerde que la informaci&oacute;n que indique ser&aacute; p&uacute;blica y visible para todos los usuarios de la plataforma.</label>
+		
+		<textarea rows="6" cols="50" id="comentario"></textarea>
+
+		</div>		
+
+</div>
+
+
+<div class="row">
+	<div class="col-xs-6 text-center">
+			<button id="Valorar" type="button" name="paso4" class="btn btn-default massfh verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Valorar Compra</button>
+      <!--<a href="mis_subastas.html"><button class="btn btn-default massfh groddo"><i class="fa fa-bell fa-2x" aria-hidden="true"></i><br />Ver mis ofertas</button></a>-->
+    </div>		
+
+    	<div class="col-xs-6 text-center">
+		<a href="javascript:parent.$('#my-modal').modal('hide');"><button id="CargarTexto" type="button" name="paso54" class="btn btn-default massfh verdotatras"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Volver Atrás </button></a>
+    </div>	
+    
+</div>	
+ 
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	// Recuperamos datos del sessionStorage
+	var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+	var datosUsuario    = sessionStorage.getItem('datosUsuario');
+	var datosPassword   = sessionStorage.getItem('datosPassword');
+	var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+	var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+	var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');	
+	
+	if(!datosUsuario || !datosPassword) window.location.replace('index.html');
+
+	// Inicialización de la pantalla
+	//
+	archivoValidacion = "http://elmundo.webexpo.es/procesos.php?jsoncallback=?";
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+		if(respuestaServer.validacion != "ok") {
+			// Si no pasa la comprobación de usuario / contraseña, vuelve a la pantalla inicial
+			window.location.replace('index.html');
+		}
+		else {
+		// elegimos una imagen de fondo al azar
+			var randomID = new Date().getTime();
+		}
+	});
+
+
+	$('#Valorar').click(function() {
+		// Recuperamos datos del sessionStorage
+		var datosUsuario    = sessionStorage.getItem('datosUsuario');
+		var datosPassword   = sessionStorage.getItem('datosPassword');
+		// registramos el texto introducido como motivo y rechazamos la oferta
+		var comentario				= $('#comentario').val();
+		var valoracion				= $('input[name=valoracion]:checked').val();
+		var subastaseleccionada   	= sessionStorage.getItem('subastaseleccionada');
+
+		if (valoracion==0 || valoracion==null) {
+			alert('Indique como valora a este vendedor, entre 1 y 5.')
+			return (false);
+		}
+
+		if (comentario.length<10) {
+			alert ('Por favor, detalla mejor la valoración del cliente');
+		} else {			
+			var url = "http://elmundo.webexpo.es/subastas.php";
+			url = url + "?usuario=" + datosUsuario + "&password=" + datosPassword + "&idsubasta="+ subastaseleccionada +"&valoracion=" +valoracion +"&explicacion=" + comentario +"&accion=valorarporusuario";
+
+			//alert(url);
+
+			$.getJSON(url,function(mensaje, validacion) {
+				if (validacion == 'success') {
+					alert ('Has confirmado la valoración de la compra.');
+					$('#comentario').empty;
+					$('input[name=valoracion]:checked').prop('checked', false);
+					parent.$('#my-modal').modal('hide');
+				} else {
+					alert ('Ha habido algun problema para valorar la compra. El motivo es : ' + html_entity_decode(mensaje.mensaje, 'ENT_QUOTES'));
+				}
+			});
+		}
+	});
+
+
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+
+</script>
+    		
+
+
+</body>
+</html>

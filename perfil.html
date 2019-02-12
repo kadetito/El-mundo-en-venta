@@ -1,0 +1,319 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Perfil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.0.3/bootstrap-show-password.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/appnw.css" />
+<style>
+
+
+.kutin {margin-bottom:20px !important;}
+.kutin li{font-size:14px !important;}
+
+</style>
+</head>
+
+<body id="main"> 
+<div id="wrapper" class="toggled">
+<!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/home-1.png" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/user-6.png" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+<li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/error.png" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        
+        </ul>
+      </div>
+<!-- Sidebar -->  
+
+
+
+      <div id="page-content-wrapper"> 	
+
+
+	
+	
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/images/logotipointerior.png" alt="" title="" class="logotiposuperior" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="http://elmundo.webexpo.es/images/user-4.png" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="http://elmundo.webexpo.es/images/settings-5.png" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+
+
+</div>  
+
+          
+ 
+          
+          
+          
+          
+    <div class="container-fluid">      
+    
+
+
+  
+	
+
+
+
+
+
+
+
+<div class="row mtop3334">	
+<div class="col-xs-12 ">
+	<div class="thumbnail peff">
+         
+
+<form name="nuevo_empleado" action="" onsubmit="enviarDatosEmpleado(); return false">
+<h4 style="color:#000;">Para modificar tu password, escribe el nuevo en la casilla. </h4>
+<ul id="div_ResultH" class="kutin"></ul>
+<div class="col-md-12 text-center"><input name="submit" type="submit" value="Cambiar password" id="enviar-recuperar" data-role="button" class="btn btn-primary " /></div>
+
+</form>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+	
+
+<script type="text/javascript">
+ 
+        
+$(document).ready(function(){
+                    
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+var datosUsuario = sessionStorage.getItem('datosUsuario');
+var datosPassword = sessionStorage.getItem('datosPassword');
+ //if (response_estado==1){                           
+                            
+$("#div_ResultH").html("<li><i class='fa fa-users fa-1g' aria-hidden='true'></i> - "+response_nom+" "+response_cognom+"</li><li><i class='fa fa-envelope  fa-1g' aria-hidden='true'></i> - "+datosUsuario+"</li><p>&nbsp;</p><p><input type='hidden' value='"+datosUsuario+"' id='emailidentificador' name='' /><input type='password'  data-toggle='password' id='passcambiar' name='' value='"+datosPassword+"' class='form-control'></p> "	);
+                   
+//una vez logeados mostramos el JSON del array recuperado de la bbdd
+
+	// >>> Pendent de convertir aquesta crida a POST o per SESSIO...
+var url="http://elmundo.webexpo.es/rebote.php?txt_usuario=" + datosUsuario + "&txt_clave=" + datosPassword ;
+$("#div_Result2").html("");
+$.getJSON(url,function(user){
+   var newRow =
+			                           
+"<div class='thumbnail'><div class='row martup'><div class='col-xs-12'></div><div class='col-xs-12 jshue'><h2>"+user.name+ " " + user.Surname + "</h2><p>" +user.PhoneNumber+ "</p>  <p> <input type='hidden' value='"+user.ID+"' name='identitat' id='identitat' /><input type='submit' class='btn "+cliente.estilboto+" btn-lg' value='"+cliente.palabra+"'>&nbsp;<a href=http://www.webentorn.com/cstapp/"+cliente.id+"><button class='btn btn-info btn-lg'>detall</button></a></p><p>&nbsp;</p</div></div></div>"                           
+	    
+                                       
+   $(newRow).appendTo("#div_Result2");
+   });	
+
+definiciones_comunes();
+			                                                  
+//  } else {//si 0 porque no se pudo elimnar
+//    window.location.href = 'index.html';
+//}                            
+             
+                    
+});
+                
+
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+
+
+</script>
+
+	
+<script>
+$('#formularito').submit(function(){
+
+  var landmarkID = $(this).parent().attr('data-landmark-id');
+
+  var postData = $(this).serialize();
+
+   
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData+'&amp;lid='+landmarkID,
+
+      url: 'http://elmundo.webexpo.es/confirmacio.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+</script>
+
+
+<script>
+	$(document).ready(function() {
+    $("#resultadoBusqueda").html('');
+});
+
+function buscar() {
+    var textoBusqueda = $("input#busqueda").val();
+ 
+     if (textoBusqueda != "") {
+        $.post("http://elmundo.webexpo.es/buscar.php", {valorBusqueda: textoBusqueda}, function(mensaje) {
+            $("#resultadoBusqueda").html(mensaje);
+         }); 
+     } else { 
+        $("#resultadoBusqueda").html('');
+        };
+};
+</script>
+<script>
+$(document).ready(function() {
+    $("#dscto").keypress(function(e) {
+        if (e.which == 13) {
+            return false;
+        }
+    });
+});
+</script>
+
+
+
+
+
+
+<script>
+//RECUPERAR	
+
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function enviarDatosEmpleado(){
+ 
+
+  divResultado = document.getElementById('resultado');
+  passrec=document.nuevo_empleado.passcambiar.value;
+  emailident=document.nuevo_empleado.emailidentificador.value;
+
+
+
+  ajax=objetoAjax();
+ 
+  ajax.open("POST", "http://elmundo.webexpo.es/cambiarpass.php",true);
+  ajax.onreadystatechange=function() {
+  	if (ajax.readyState==4) {
+		divResultado.innerHTML = ajax.responseText
+		
+	}
+	alert("El teu password ha estat modificat!");
+	window.location.href="segunda.html";
+ }
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("passcambiar="+passrec+"&emailidentificador="+emailident)
+}
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+</script>
+
+
+</body>
+</html>

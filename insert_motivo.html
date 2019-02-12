@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="estils.css" />
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+</style>
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+      
+ <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+        	
+                                   
+
+           	
+           	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/home-1.svg" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/user-6.svg" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+<li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/error.svg" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+<div class="container-fluid">      
+    
+<div id="page-content-wrapper"> 	
+
+
+	
+	
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="img/logotipointerior.svg" alt="" title="" style="width:100%;" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="icones/user-4.svg" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="icones/settings-5.svg" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+
+
+</div>  
+
+
+<h1>Expl&iacute;canos por qu&eacute; has cancelado la venta.</h1>
+<h3>Solo debe cancelarse una venta si el ofertante se est&aacute; comportando de forma incorrecta, ya que en este estado entendemos que ya ha habido un acuerdo previo. En base a los comentarios, tomaremos las medidas que condideremos oportunas</h3>
+
+
+
+<div class="row">
+		<div class="col-md-12 text-center"><textarea id="Descripcion" placeholder="Describa aqu&iacute; el motivo por el cual decide cancelar la oferta" class="form-control" rows="8"></textarea></div>		
+</div>
+
+
+<div class="row">
+	<div class="col-xs-6 text-center">
+			<button id="Cancelar" type="button" name="paso4" class="btn btn-default massfh verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Cancelar Oferta</button>
+      <!--<a href="mis_subastas.html"><button class="btn btn-default massfh groddo"><i class="fa fa-bell fa-2x" aria-hidden="true"></i><br />Ver mis ofertas</button></a>-->
+    </div>		
+
+    	<div class="col-xs-6 text-center">
+		<a href="javascript:history.go(-1);"><button id="CargarTexto" type="button" name="paso54" class="btn btn-default massfh verdotatras"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Volver Atrás </button></a>
+    </div>	
+    
+</div>	
+	
+	
+
+
+</div>
+
+</div>
+          
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	// Recuperamos datos del sessionStorage
+	var datosUsuario    = sessionStorage.getItem('datosUsuario');
+	var datosPassword   = sessionStorage.getItem('datosPassword');
+	if(!datosUsuario || !datosPassword) window.location.replace('index.html');
+		
+	// Inicialización de la pantalla
+	//
+  	archivoValidacion = "http://elmundo.webexpo.es/procesos.php?jsoncallback=?";
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+		if(respuestaServer.validacion != "ok") {
+			// Si no pasa la comprobación de usuario / contraseña, vuelve a la pantalla inicial
+			window.location.replace('index.html');
+		}
+		else {
+		// elegimos una imagen de fondo al azar
+			var randomID = new Date().getTime();
+		}
+	});
+});
+	
+	$('#Cancelar').click(function() {
+		// Recuperamos datos del sessionStorage
+		var datosUsuario    = sessionStorage.getItem('datosUsuario');
+		var datosPassword   = sessionStorage.getItem('datosPassword');
+		// registramos el texto introducido como motivo y rechazamos la oferta
+		var Motivo 					= $('#Descripcion').val();
+		var subastaseleccionada   	= sessionStorage.getItem('subastaseleccionada');
+		
+		if (Motivo.length<10) {
+			alert ('Por favor, detalla mejor el motivo de la cancelación');
+		} else {
+		
+			var url = "http://elmundo.webexpo.es/subastas.php";
+			url = url + "?usuario=" + datosUsuario + "&password=" + datosPassword + "&idsubasta="+ subastaseleccionada +"&explicacion="+ Motivo +"&accion=rechazar";
+
+			$.getJSON(url,function(mensaje, validacion) {
+
+				if (validacion == 'success') {
+					alert ('La oferta ha quedado rechazada y el motivo indicado ha quedado registrado. Gracias.');
+					window.location.href = 'subastas_asociados.html';
+				} else {
+					alert ('Ha habido algun problema para registrar el rechazo la oferta. El motivo es : ' + html_entity_decode(mensaje.mensaje, 'ENT_QUOTES'));
+				}
+			});		
+		}
+	});
+</script>           
+          
+
+<script>
+
+
+$(document).ready(function() {
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+    $('body').addClass(classToAdd);
+
+});
+
+</script>
+
+
+</body>
+</html>

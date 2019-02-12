@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App Profirex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estil.css" rel="stylesheet">
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+</style>
+  </head>
+
+
+  <body>
+<div id="wrapper" class="toggled"> 
+
+
+
+<!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	<div class="row millionr"><div class="col-xs-3"><img style="width:50px;display:inline;" src="http://elmundo.webexpo.es/img/classprofile.png" /></div><div class="col-xs-9"><strong>Nom i cognoms del identificat</strong></div> </div>    
+          <li><a href="tria.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/user-7.svg" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="misofertas.html">Veure les meves ofertes <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/user-7.svg" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="misdatos.html">Canviar les meves dades <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/settings-5.svg" alt="CONFIG" title="CONFIG" /></a></li>
+        </ul>
+      </div>
+<!-- Sidebar -->
+      
+      
+      
+      	
+	 <div id="page-content-wrapper"> 
+<div class="container-fluid">
+	
+	
+	
+
+	
+<div class="row marginvbaix">	
+  <div class="col-xs-6">
+  		<img style="width:100%" src="http://elmundo.webexpo.es/img/logo_horiz.svg" alt="" title="" />
+			
+  </div>
+  <div class="col-xs-6">
+  <a id="menu-toggle" href="#"><img class="medidabar" src="icones/settings-5.svg" alt="MENU" title="MENU" /></a></div>
+  </div>
+</div>	
+
+
+
+
+
+
+<div class="row margensuperior">
+		<div class="col-md-12">
+			
+		</div>
+</div>
+	
+	
+
+<div class="row">
+		<div class="col-md-12">
+
+<!--thumb-->
+
+
+  <div class="row">
+   <div class="col-md-12 text-center">
+<div class="margendoble_peq">   	
+<img class="tamaniope" src="icones/like.svg" alt="CORRECTO" title="CORRECTO" />
+</div>
+
+<h4>Tu propuesta se ha llevado a cabo con &eacute;xito. En 24 horas recibir&aacute;s la respuesta sobre su viabilidad.
+</h4>
+<h2>Gracias!</h2>
+
+ <p><a href="tria.html"><button class="btn btn-primary">Volver a buscar</button></a></p>  	
+   	
+   	</div>
+ </div>
+
+
+
+<!--/thumb-->			
+
+			
+		</div>
+</div>
+			
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+<div class="row cajacopy">	
+  <div class="col-md-12 text-center">
+&copy; 2016  	
+  	</div>
+</div>			
+			
+			
+</div>	
+</div>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function() {
+     
+     
+
+$('body').css('display', 'none');
+
+$('body').fadeIn(700);
+
+
+
+$('.enllas').click(function() {
+
+event.preventDefault();
+
+newLocation = this.href;
+
+$('body').fadeOut(700, newpage);
+
+});
+
+function newpage() {
+
+window.location = newLocation;
+
+}
+
+});
+</script>
+    
+	<script type="text/javascript">
+	$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+});
+	</script>
+	
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+    
+        $(function(){
+      // bind change event to select
+      $('#dynamic_select2').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+    
+</script>
+  </body>
+</html>

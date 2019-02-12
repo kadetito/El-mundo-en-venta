@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Ofertas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/appnw.css" />
+
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+    .table-striped {background-color:#ffffff;margin-bottom:55px !important;}
+
+  .table-striped th{background-color:#D2A902;}
+  .sdcssdc .card-body p{color:#ffffff !important;}
+
+</style>	
+</head>
+
+<body> 
+
+
+<div id="wrapper" class="toggle">
+      
+<!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/home-1.png" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/user-6.png" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+<li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/error.png" alt="Desconectar" title="Desconectar" /></a></li>
+         
+        </ul>
+      </div>
+<!-- Sidebar -->  
+          
+          
+    
+    
+<div id="page-content-wrapper"> 	
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/images/logotipointerior.png" alt="" title="" class="logotiposuperior" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="http://elmundo.webexpo.es/images/user-4.png" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="http://elmundo.webexpo.es/images/settings-5.png" alt="MENU" title="MENU" /></a>
+  </div>
+</div> 
+</div>
+
+<div class="container-fluid">      
+<form action="mis_subastas.html" method="POST">
+	<div class="container-fluid" style="margin-top:12px;">
+		<div class="row">
+			<div class="col-md-12 ">
+				<h2>Mis Ofertas</h2>
+				
+				
+				
+				
+				
+				
+
+						
+<a href="segunda.html" class="btn btn-default minipp verdotatras"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></a></h3>
+<a href="#"            class="btn btn-default minipp verdotatras" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus-circle  fa-2x" aria-hidden="true"></i></a>   
+
+<!-- Quiero publicar otra oferta-->
+<!-- Pulsa aquí para saber más sobre mis ofertas.-->				
+				
+				
+				
+				
+				<div class="collapse sdcssdc" id="collapseExample" style="background-color: #3279B5; padding:8px; margin: 4px">
+				  <div class="card card-body">
+					<p>Estas son las ofertas que has creado recientemente. Se muestran ordenadas por el tiempo que falta para que caduquen. Una vez caducadas, seguiran apareciendo
+						durante 24 horas más, como AGOTADAS.</p>
+						<p>Puedes borrar o modificar tus ofertas siempre que no hayan sido seleccionadas por uno de nuestros profesionales o haya agotado el plazo</p>
+						<br />
+				  </div>
+				</div>				
+
+				
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th class="text-center">Fecha</th>
+							<th class="text-center" colspan="2">L&iacute;mite</th>
+							<th class="text-center">Acciones</th>
+						</tr>
+					</thead>
+					<tbody id="mostrarsubastas">
+					</tbody>
+				</table>				
+			</div>
+		</div>	
+	</div>
+</form>
+
+<div class="row">
+<div class="col-xs-12 text-center"><a href="segunda.html" data-transition="slidefade"><input type="button" data-role="button"  class="btn btn-primary" value="Quiero publicar otra oferta" /></a></div>
+</div>								
+<div class="row">
+	<div class="col-xs-12 text-center">
+			&nbsp;	
+		</div>
+	</div>	
+
+
+
+<!-- Button trigger modal -->
+<!-- Button trigger modal -->
+<script type="text/javascript">
+$(function(){
+	$('#my-modal').on('hidden.bs.modal', function () {
+	  window.location.reload();
+	});
+});
+</script>
+
+<!--<a href="#my-modal" data-toggle="modal" class="btn btn-default massfh groddo  biff"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br />Valorar experiencia</a> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" style="color:darkgrey">Valorar Experiencia</h4>
+        </div>
+        <div class="modal-body">
+       
+          <iframe src="valorar_compra.html" width="100%" height="580"></iframe>
+         
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->  
+   
+   
+    </div>		
+</div>
+ 
+          
+<script type="text/javascript">
+
+	
+$(document).ready(function(){
+                    
+	// Recupera los datos
+	var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+	var response_url 	= sessionStorage.getItem('response.url');
+	var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+	var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+	var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+	var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+	
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+	
+	// Esborrem la marca de actualizació de subasta
+	sessionStorage.setItem('actualitzacio', null);
+
+	// Inicialización de la pantalla
+	//
+  	archivoValidacion = "http://elmundo.webexpo.es/procesos.php?jsoncallback=?";
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword })
+	.done(function(respuestaServer) {
+		if(respuestaServer.validacion != "ok") {
+			// Si no pasa la comprobación de usuario / contraseña, vuelve a la pantalla inicial
+			window.location.replace('index.html');
+		}
+		else {
+		// elegimos una imagen de fondo al azar
+			var randomID = new Date().getTime();
+			
+	// en index.php, se aplica sobre .ui-page		
+/*			$('.ui-page').css({
+				"background-image": "url('http://elmundo.webexpo.es/" + respuestaServer.ImagenDeFondo + "?r=" + randomID+ "')",
+				"background-repeat": "repeat",
+				"background-position": "top center"
+				}); 
+*/			
+			
+	// en segunda.php, se aplica sobre body, pero hace dos refrescos, uno ajustando ancho y otro ajustando alto. A mejorar		
+/*			$('body').css({
+				"background-image": "url('http://elmundo.webexpo.es/" + respuestaServer.ImagenDeFondo + "?r=" + randomID+ "')",
+				"background-repeat": "repeat",
+				"background-position": "top center"
+				});
+*/
+			
+	// elegimos un anuncio de pie al azar	
+	//		$("#bannerinferior").html('<img style="width:100%" src="' + respuestaServer.BannerPublicitario + '">');
+
+		}
+	});
+
+		
+	
+	// Actualitza listasubastas
+	update_lista();
+	arrancar_reloj_missubastas();		
+	
+    $("#div_Result").html("<li>"+datosUsuario+' '+response_nom +' '+response_cognom+"</li>"	);
+	
+	definiciones_comunes();
+	
+	
+ //if (response_estado==1){                           
+                            
+//	$("#div_Result").datosUsuario
+                   
+
+			                       
+			                       
+	                               //una vez logeados mostramos el JSON del array recuperado de la bbdd
+//	                               var url="http://elmundo.webexpo.es/rebote.php";
+//			                           $("#div_Result2").html("");
+			                           /*$.getJSON(url,function(clientes){
+			                           $.each(clientes, function(i,cliente){
+			                           var newRow =                            
+"<div class=\"thumbnail\"><div class=\"row martup\"><div class=\"col-xs-12 jshue\"><h2>"+cliente.Name+ " " + cliente.Surname +"</h2></div></div></div>"                           
+			                           $(newRow).appendTo("#div_Result2");
+			                           });
+			                           });*/	
+			                           
+			                           
+			                                                  
+//  } else {//si 0 porque no se pudo elimnar
+//    window.location.href = 'index.html';
+//}                            
+             
+ });
+                
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+    $("#wrapper").toggleClass("active");
+});
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+</script>
+</body>
+</html>

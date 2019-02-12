@@ -1,0 +1,58 @@
+@import "compass/css3";
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  background-size: cover;
+}
+
+
+#second_stars{
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  top:0;
+  bottom:0;
+  width: 320px;
+  height: 320px;
+  -moz-animation: spin 15s infinite linear;
+  -webkit-animation: spin 15s infinite linear;
+  -o-animation: spin 15s infinite linear;
+  animation: spin 15s infinite linear;
+  circle{
+    fill: #000;
+  }
+}
+

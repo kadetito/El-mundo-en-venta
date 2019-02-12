@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmaci&oacute;n</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/appnw.css" />
+
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+    .table-striped {background-color:#ffffff;margin-bottom:55px !important;}
+
+  .table-striped th{background-color:#D2A902;}
+  
+
+#myModalein{
+  width: 96% !important;
+}
+
+</style>
+</head>
+
+<body  id="main"> 
+
+
+<div id="wrapper" class="toggled">
+      
+   
+<!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/home-1.png" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/user-6.png" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+          <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/error.png" alt="Desconectar" title="Desconectar" /></a></li>
+         </ul>
+      </div>
+<!-- Sidebar -->            
+
+   
+<div id="page-content-wrapper"> 	
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/images/logotipointerior.png" alt="" title="" class="logotiposuperior" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="http://elmundo.webexpo.es/images/user-4.png" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="http://elmundo.webexpo.es/images/settings-5.png" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+</div>    
+   
+       
+          
+<div class="container-fluid">      
+
+<div class="row">
+	<div class="col-md-12 text-center mtop3335">
+		<h2>Si eres profesional,esta es tu &aacute;rea</h2>
+
+<div class="text-center">
+<div  role="alert" id="confirmacionparticulares" style="color:#000 !important;">
+<h3>Muy bien!</h3>
+<p>Revisaremos sus datos y si cumple el requisito de ser una empresa dedicada a los secotres seleccionados activaremos su acceso.</p>
+<p>En breve recibir&aacute;s un correo con las instrucciones para proceder al pago de la subscripci&oacute;n.</p>
+	<p>Tu cuenta de acceso y contrsaseña ser&aacute; la misma que ya est&aacute;s usando. Al iniciar la conexi&oacute;n o desde el panel lateral de opciones podr&aacute;s acceder a la lista de ofertas publicadas.</p>
+
+</div>
+<div  role="alert" id="confirmacionprofesionales" style="display:none;color:#000 !important;">
+<h3>Muy bien!</h3>
+<p>Hemos registrado tu nuevo pedido. En breve recibir&aacute;s un correo con las instrucciones para proceder al pago de la nueva subscripci&oacute;n.</p>
+	<p>Los servicios contrados quedaran renovados en el momento que realices el pago</p>
+	<p>Contacta con nosotros en caso de cualquier incidencia</p>
+
+</div>
+
+
+
+
+</div>
+	</div>
+	
+	
+
+	
+    <div class="col-xs-12 text-center">
+		<div id="BotonAtras">
+			<a href="segunda.html"><button id="CargarTexto" type="button" name="paso54" class="btn btn-default massfh2 verdotatras"><i class="fa fa-check fa-2x" aria-hidden="true"></i>Atrás </button></a>
+		</div>
+		<div id="BotonAtrasProfesionales" style="display:none">
+			<a href="subastas_asociados.html"><button id="CargarTexto" type="button" name="paso54" class="btn btn-default massfh2 verdotatras"><i class="fa fa-check fa-2x" aria-hidden="true"></i>Atrás </button></a>
+		</div>
+    </div>	
+    
+    
+    	
+
+
+
+</div>		
+
+
+
+
+
+</div>
+
+  
+          
+         
+<script type="text/javascript">
+
+$(document).ready(function(){
+                    
+	// Recupera los datos
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+var datosUsuario	= sessionStorage.getItem('datosUsuario');
+var datosPassword	= sessionStorage.getItem('datosPassword');
+
+
+
+if (response_nivel == 50)
+	{
+	$('#confirmacionparticulares').hide();
+	$('#BotonAtras').hide();
+	$('#confirmacionprofesionales').show();
+	$('#BotonAtrasProfesionales').show();
+	}
+});
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+	
+	definiciones_comunes();
+
+});
+
+	$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

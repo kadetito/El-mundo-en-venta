@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="intelxdk.js"></script>
+<script src="xhr.js"></script>
+<script src="cordova.js"></script>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="estils.css" />
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+</style>
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+      
+ <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+
+           	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/home-1.svg" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/user-6.svg" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis subastas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="subastas" title="subastas" /></a></li>
+<li><a href="subastas_asociados.html">Subastas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="Subastas publicadas" title="Subastas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/error.svg" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        
+          
+
+        
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+    <div class="container-fluid">      
+    
+<div id="page-content-wrapper"> 	
+
+
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-10">
+  	<img src="http://elmundo.webexpo.es/img/logotipointerior.svg" alt="" title="" style="width:100%;" />
+  </div>
+  <div class="col-xs-1 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="icones/user-4.svg" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-1 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="icones/settings-5.svg" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+
+
+</div>  
+
+
+
+
+
+
+<div class="row">
+	<div class="col-md-12 text-center">
+		<h2>Si eres profesional,esta es tu &aacute;rea</h2>
+		<h3>Texte referent</h3>
+		<p>instruccions breus</p>
+<div class="text-left">
+<form id="form1" action="escoger_categorias.html">
+	
+<label for="">Nombre y apellidos</label>
+<input type="text" id="Nombre" name="Nombre" class="form-control" />
+<label for="">Empresa</label>
+<input type="text" id="Empresa" name="Empresa" class="form-control" />
+<label for="">CIF/NIF</label>
+<input type="text" id="NIF" name="NIF" class="form-control" />
+<label for="">Describa brevemente su actividad</label>
+<input type="text" id="Descripcion" name="Descripcion" class="form-control" />
+<label for="">Periodo que deseas contratar nuestros servicios</label>
+<select id="Periodo" name="Periodo" class="form-control">
+<option value="1" selected>1 mes</option>
+<option value="3">3 meses</option>
+<option value="6">6 meses</option>
+<option value="12">12 meses</option> 	
+</select>
+
+<label for="">Subir archivo Modelo 036</label>
+<input type="file" name="" class="form-control" />
+
+	<div id="texte"></div>
+
+
+<p class="text-center"><button id="guardar" type="button" name="paso4" class="btn btn-default massfh verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Guardar y escoger<br />categor&iacute;as</button></p>
+
+</form>
+</div>
+	</div>
+</div>		
+
+
+
+
+
+</div>
+
+  
+          
+         
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+$('#guardar').click(function () {
+	sessionStorage.setItem('Nombre', $('#Nombre').val());
+	sessionStorage.setItem('Empresa', $('#Empresa').val());
+	sessionStorage.setItem('NIF', $('#NIF').val());
+	sessionStorage.setItem('Descripcion', $('#Descripcion').val());
+	sessionStorage.setItem('Periodo', $('#Periodo').val());
+
+//	var texte = 'ud. ha indicado ' + $('#Nombre').val() + ', ' + $('#Empresa').val() + ', ' + $('#NIF').val() + ', ' + $('#Descripcion').val() + ', ' + $('#Periodo').val() + ' meses. ';
+
+//	$('#texte').html(texte);	
+	
+	
+	$('#form1').submit();
+	
+});
+                    
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+
+ //if (response_estado==1){                           
+
+/* 
+
+$("#div_Result").html("<a href=\"index.html\" onClick=\"sessionStorage.clear(); return true;\" >"+response_nom+" "+response_cognom+" <img style=\"width:17px;float:right;margin-right:25px;margin-top:12px;\" src=\"icones/exit.svg\" alt=\"SORTIR\" title=\"SORTIR\" /></a>	 "	);
+                   
+
+			                       
+			                       
+	                               //una vez logeados mostramos el JSON del array recuperado de la bbdd
+                                      var url="http://elmundo.webexpo.es/rebote.php";
+			                           $("#div_Result2").html("");
+			                           $.getJSON(url,function(clientes){
+									   
+									   var contenido = "<form><input type='hidden' name='idusuari' id='idusuari' value='"+response_id+"'/>";
+									   
+									   var newRow =	"";
+									   									   
+			                           $.each(clientes, function(i,cliente){
+			                           newRow = newRow + 
+"<div class='thumbnail'><div class='row martup'><div class='col-xs-12'><div class='cropp'><img class='percent ' src=http://elmundo.webexpo.es/fotos/"+cliente.fotografia+" /></div></div><div class='col-xs-12 jshue'><h2>"+cliente.titol+"</h2><p class='datel'>"+cliente.data+" - "+cliente.hora+"</p>"+cliente.texte+"<p>&nbsp;</p><p>&nbsp;<input type='submit' name='detallID"+cliente.id+"' id='detallID"+cliente.id+"' value='"+cliente.id+"' /></p><p>&nbsp;</p></div></div></div>"                           
+			                           });
+									   contenido = contenido + newRow + "</form>";
+									   
+			                           $(contenido).appendTo("#div_Result2");
+			                           });	
+			                           
+			                           
+			                                                  
+//  } else {//si 0 porque no se pudo elimnar
+//    window.location.href = 'index.html';
+//}                            
+             
+*/
+		
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+
+	
+    		
+
+<script type="text/javascript"> 
+
+$('#closeapp').submit(function() {
+	 
+navigator.app.exitApp();
+
+});
+        
+ 
+
+</script>
+
+
+
+
+<script>
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function MostrarConsulta(datos){
+   divResultado = document.getElementById('resultado');
+   ajax=objetoAjax();
+   ajax.open("GET", datos);
+   ajax.onreadystatechange=function() {
+      if (ajax.readyState==4) {
+         divResultado.innerHTML = ajax.responseText
+      }
+   }
+   ajax.send(null)
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+$('#detallID').submit(function(){
+
+
+  var postData = $(this).serialize();
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData,
+
+      url: 'http://elmundo.webexpo.es/detall.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="intelxdk.js"></script>
+<script src="xhr.js"></script>
+<script src="cordova.js"></script>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="estils.css" />
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+
+.alert-success p{color:#000 !important;}
+.alert-success h3{color:#000 !important;}
+</style>
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+      
+ <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+
+           	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/home-1.svg" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/user-6.svg" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis subastas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="subastas" title="subastas" /></a></li>
+<li><a href="subastas_asociados.html">Subastas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="Subastas publicadas" title="Subastas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/error.svg" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        
+          
+
+        
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+    <div class="container-fluid">      
+    
+<div id="page-content-wrapper"> 	
+
+
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/img/logotipointerior.svg" alt="" title="" style="width:100%;" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="icones/user-4.svg" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="icones/settings-5.svg" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+
+
+</div>  
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-12 text-center">
+		<h2>Si eres profesional,esta es tu &aacute;rea</h2>
+<div class="text-center">
+<div class="alert alert-success" role="alert" id="confirmacionparticulares">
+<h3>Muy bien!</h3>
+<p>Revisaremos sus datos y si cumple el requisito de ser una empresa dedicada a los secotres seleccionados activaremos su acceso.</p>
+<p>En breve recibir&aacute;s un correo con las instrucciones para proceder al pago de la subscripci&oacute;n.</p>
+	<p>Tu cuenta de acceso y contrsaseña ser&aacute; la misma que ya est&aacute;s usando. Al iniciar la conexi&oacute;n o desde el panel lateral de opciones podr&aacute;s acceder a la lista de ofertas publicadas.</p>
+</div>
+<div class="alert alert-success" role="alert" id="confirmacionprofesionales" style="display:none">
+<h3>Muy bien!</h3>
+<p>Hemos registrado tu nuevo pedido. En breve recibir&aacute;s un correo con las instrucciones para proceder al pago de la nueva subscripci&oacute;n.</p>
+	<p>Los servicios contrados quedaran renovados en el momento que realices el pago</p>
+	<p>Contacta con nosotros en caso de cualquier incidencia</p>
+</div>
+</div>
+</div>
+</div>		
+
+
+
+
+
+</div>
+
+  
+          
+         
+<script type="text/javascript">
+
+$(document).ready(function(){
+                    
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+
+
+if (response_nivel == 50)
+	{
+	$('#confirmacionparticulares').hide();
+	$('#BotonAtras').hide();
+	$('#confirmacionprofesionales').show();
+	$('#BotonAtrasProfesionales').show();
+	}
+	
+		
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+
+	
+    		
+
+<script type="text/javascript"> 
+
+$('#closeapp').submit(function() {
+	 
+navigator.app.exitApp();
+
+});
+        
+ 
+
+</script>
+
+
+
+
+<script>
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function MostrarConsulta(datos){
+   divResultado = document.getElementById('resultado');
+   ajax=objetoAjax();
+   ajax.open("GET", datos);
+   ajax.onreadystatechange=function() {
+      if (ajax.readyState==4) {
+         divResultado.innerHTML = ajax.responseText
+      }
+   }
+   ajax.send(null)
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+$('#detallID').submit(function(){
+
+
+  var postData = $(this).serialize();
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData,
+
+      url: 'http://elmundo.webexpo.es/detall.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

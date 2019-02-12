@@ -1,0 +1,275 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/appnw.css" />
+<style>
+hr {margin:0px;padding:0px;}
+</style>
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+ <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+      <ul class="sidebar-nav" id="sidebar">
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/home-1.png" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/user-6.png" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis ofertas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Mis Ofertas" title="Mis Ofertas" /></a></li>
+		  <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/calendar-5.png" alt="Ofertas publicadas" title="Ofertas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="http://elmundo.webexpo.es/images/error.png" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+      
+    
+<div id="page-content-wrapper"> 	
+
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="http://elmundo.webexpo.es/images/logotipointerior.png" alt="" title="" class="logotiposuperior" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="http://elmundo.webexpo.es/images/user-4.png" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="http://elmundo.webexpo.es/images/settings-5.png" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+</div>      
+    
+ <div class="container-fluid">   
+
+<div id="altacliente">
+
+	<div class="row">
+	<div class="col-md-12 text-center mtop3335">
+		<p>Si eres profesional,esta es tu &aacute;rea.
+			Primero debes darte de alta como asociado. Verificaremos tus datos.
+Aseguramos a los usuarios que estan tratado con profesionales</p>
+<div class="text-left">
+<form id="form1" method="post" action="escoger_categorias.html">
+
+			
+<p><label for="Nombre">Tu nombre</label>
+<input type="text" id="Nombre" placeholder="Escribe aqu&iacute; tu nombre y apellidos" data-role="none" name="Nombre" class="form-control" required="required" />
+<label class="error" for="Nombre" id="Nombre_error">Deberias indicar tu nombre, te llamaremos cuando se acepte tu oferta</label></p>
+
+<p><label for="Empresa">Nombre de la empresa</label>
+<input type="text" id="Empresa" placeholder="Debes saber que solo permitimos empresas reales y que podamos validar" data-role="none" name="Empresa" class="form-control" required="required"/>
+<label class="error" for="Empresa" id="Empresa_error">Deberias indicar el nombre la empresa</label></p>
+
+<p><label for="NIF">CIF/NIF</label>
+<input type="text" id="NIF" placeholder="NIF de tu actividad" data-role="none" name="NIF" class="form-control" required="required"/>
+<label class="error" for="NIF" id="NIF_error">Deberias indicar el NIF de la empresa</label></p>
+
+<p><label for="Descripcion">Describa brevemente su actividad</label>
+<input type="text" id="Descripcion" placeholder="Queremos saber a que se dedica tu empresa, para confirmar que es adecuada para los servicios que ofrecemos a nuestros clientes" data-role="none" name="Descripcion" class="form-control" required="required"/>
+<label class="error" for="Descripcion" id="Descripcion_error">Necesitamos que nos describas a qu&eacute; se dedica tu empresa</label></p>
+
+<label for="Periodo">Periodo que deseas contratar nuestros servicios</label>
+<select id="Periodo" name="Periodo" class="form-control">
+<option value="1" selected>1 mes</option>
+<option value="3">3 meses</option>
+<option value="6">6 meses</option>
+<option value="12">12 meses</option> 	
+</select>
+
+<label for="">Subir archivo Modelo 036</label>
+<input type="file" name="" class="form-control" />
+
+	<div id="texte"></div>
+
+
+<p class="text-center"><button id="guardar" type="button" name="paso4" class="btn btn-default massfh2 verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i>Guardar y escogercategor&iacute;as</button></p>
+
+</form>
+</div>
+	</div>
+</div>		
+
+</div>
+<center>
+<div id="profesionales" class="mtop3335" style="display:none"> 
+
+	<h1>Opciones</h1>
+	
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="freshlittlevermell text-center"><a href="clientes.html" ><i class="fa fa-building-o fa-1g" aria-hidden="true"></i><br />Modificar<br />mis datos</a></div>
+		</div>	
+		<div class="col-xs-4">
+			<div class="freshlittlevermell text-center"><a href="escoger_categorias.html" ><i class="fa fa-line-chart fa-1g" aria-hidden="true"></i><br />Ampliar los<br />servicios</a></div>
+		</div>	
+		<div class="col-xs-4">
+			<center><div class="freshlittlevermell text-center"><a href="facturas.html" ><i class="fa fa-file-pdf-o fa-1g" aria-hidden="true"></i><br />Acceso a mis<br />facturas</a></div></center>
+		</div>	
+	</div>	
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="freshlittlevermell text-center" ><a href="misventas.html" ><i class="fa fa-euro fa-1g" aria-hidden="true"></i><br />Consulta de<br />mis ventas</a></div>
+		</div>	
+		<div class="col-xs-6">
+			<div class="freshlittlevermell text-center" ><a href="subastas_asociados.html" ><i class="fa fa-comments-o fa-1g" aria-hidden="true"></i><br />Consulta de<br />ofertas activas</a></div>
+		</div>	
+	</div>		
+</div>
+</center>
+  
+          
+         
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+$('.error').hide();	
+
+$('#guardar').click(function () {
+	
+	// Verificamos que los datos obligatorios e aya indicado
+	
+	//Obtenemos el valor del campo nom
+	var camp = $("input#Nombre").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Nombre_error").show();
+		$("input#Nombre").focus();
+		return false;
+	}
+		
+	//Obtenemos el valor del campo Empresa
+	var camp = $("input#Empresa").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Empresa_error").show();
+		$("input#Empresa").focus();
+		return false;
+	}
+		
+	//Obtenemos el valor del campo NIF
+	var camp = $("input#NIF").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#NIF_error").show();
+		$("input#NIF").focus();
+		return false;
+	}
+
+	//Obtenemos el valor del campo NIF
+	var camp = $("input#Descripcion").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Descripcion_error").show();
+		$("input#Descripcion").focus();
+		return false;
+	}	
+	
+	
+	sessionStorage.setItem('Nombre', $('#Nombre').val());
+	sessionStorage.setItem('Empresa', $('#Empresa').val());
+	sessionStorage.setItem('NIF', $('#NIF').val());
+	sessionStorage.setItem('Descripcion', $('#Descripcion').val());
+	sessionStorage.setItem('Periodo', $('#Periodo').val());
+
+//	var texte = 'ud. ha indicado ' + $('#Nombre').val() + ', ' + $('#Empresa').val() + ', ' + $('#NIF').val() + ', ' + $('#Descripcion').val() + ', ' + $('#Periodo').val() + ' meses. ';
+
+//	$('#texte').html(texte);	
+	
+	
+	$('#form1').submit();
+	
+});
+                    
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+var datosUsuario	= sessionStorage.getItem('datosUsuario');
+var datosPassword	= sessionStorage.getItem('datosPassword');
+
+
+if (response_nivel == 50)
+	{
+	$('#altacliente').hide();
+	$('#profesionales').show();
+	}
+	
+	
+// Mostramos nombre del usuario                            
+$("#div_Result").html("<li>"+datosUsuario+' '+response_nom +' '+response_cognom+"</li>"	);
+var url="http://elmundo.webexpo.es/rebote.php";
+$("#div_Result2").html("");
+		
+definiciones_comunes();		
+});
+	
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+
+</script>
+
+	
+<script>
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function MostrarConsulta(datos){
+   divResultado = document.getElementById('resultado');
+   ajax=objetoAjax();
+   ajax.open("GET", datos);
+   ajax.onreadystatechange=function() {
+      if (ajax.readyState==4) {
+         divResultado.innerHTML = ajax.responseText
+      }
+   }
+   ajax.send(null)
+}
+</script>
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="http://elmundo.webexpo.es/elmundo.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="css/app.css" />
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+</style>
+
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+      
+        	
+        	
+    <div class="container-fluid">      
+    
+
+
+	
+<form id="paso4" runat="server" action="valorar_venta.html" onsubmit="return closeSelf()" method="GET">
+<div class="row">
+
+			
+		<div class="col-md-12 text-center"><label for="">Si ud. ha cancelado una oferta de un usuario, deber ser por un buen motivo. Indiquenos el motivo de cancelación para poder valorar desde el dto. de administración de la app s qu&eacute; acci&oacute;n debe emprenderse con esta cuenta de usuario.</label>
+		
+		<textarea rows="6" cols="50" name="comentario"></textarea>
+
+		</div>		
+
+</div>
+
+</form>
+
+ 
+
+</div>
+	
+    		
+
+<script type="text/javascript"> 
+
+    function closeSelf() {
+        parent.location.reload();
+      }
+</script>
+
+
+
+
+
+
+</body>
+</html>

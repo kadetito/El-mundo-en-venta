@@ -1,0 +1,698 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="intelxdk.js"></script>
+<script src="xhr.js"></script>
+<script src="cordova.js"></script>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="estils_boots.css" />
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="sidebar.css" />
+<link rel="stylesheet" href="estils.css" />
+<style>
+	.fons1{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons2{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons3{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons4{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+	.fons5{background:url('http://elmundo.webexpo.es/img/5117908f2bd3aa0e0aaf4f2655cd8bfa.jpg');background-repeat:no-repeat;background-size:cover;-webkit-background-size: cover;-moz-background-size:cover;}
+</style>
+
+<style>
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+</style>
+
+</head>
+
+<body id="main"> 
+
+<div id="wrapper" class="toggled">
+      
+ <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"></li>
+      </ul>
+        <ul class="sidebar-nav" id="sidebar">
+        	
+        	
+                                   
+
+           	
+           	
+          <li id="div_Result"></li>
+          <li><a href="segunda.html">Inicio <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/home-1.svg" alt="HOME" title="HOME" /></a></li>
+          <li><a href="perfil.html">Mi perfil <img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/user-6.svg" alt="PERFIL" title="PERFIL" /></a></li>
+          <li><a href="mis_subastas.html">Mis subastas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="subastas" title="subastas" /></a></li>
+<li><a href="subastas_asociados.html">Subastas publicadas<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/calendar-5.svg" alt="Subastas publicadas" title="Subastas publicadas" /></a></li>
+
+          <li><a href="#" data-role="button" id="closeapp_2">Desconectar<img style="width:17px;float:right;margin-right:25px;margin-top:12px;" src="icones/error.svg" alt="Desconectar" title="Desconectar" /></a></li>
+        
+        
+          <li><form><input type="submit" id="closeapp" value="Desconectar" /></form></li>
+
+      
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </ul>
+      </div>
+<!-- Sidebar -->         
+          
+    <div class="container-fluid">      
+    
+<div id="page-content-wrapper"> 	
+
+
+	
+	
+<div class="row marginvbaix page-header">	
+  <div class="col-xs-8">
+  	<img src="img/logotipointerior.svg" alt="" title="" style="width:100%;" />
+  </div>
+  <div class="col-xs-2 text-right">
+  <a href="professionals.html"><img  class="medidabar"  src="icones/user-4.svg" alt="Profesionales" title="Profesionales" /></a>
+  </div>
+
+  <div class="col-xs-2 text-right">
+  <a id="menu-toggle" href="#"><img  class="medidabar2"  src="icones/settings-5.svg" alt="MENU" title="MENU" /></a>
+  </div>
+  </div> 
+
+
+</div>  
+
+<form id="paso5" action="paso5.html" method="POST">
+
+
+
+
+<!--AFEGIT RAFA-->
+<div class="row margbottomn">
+<div class="col-xs-3"><div class="freshlittle text-center">
+	<a href="segunda.html"><img  class="imatgecateg"  src="" title="" id="CatBase" style="margin-top: 16px" /></a></div>
+	<div id="TextBase" style="text-align: center"></div>
+</div>
+<div class="col-xs-3"><div class="freshlittle text-center">
+	<a href="paso2.html"><img  class="imatgecateg"  src="" title="" id="CatNivel1" style="margin-top: 16px" /></a></div>
+	<div id="TextNivel1" style="text-align: center"></div>
+</div>
+<div class="col-xs-3"><div class="freshlittle text-center" id="tercerabola">
+	<a href="paso3.html"><img  class="imatgecateg"  src="" title="" id="CatNivel2" style="margin-top: 16px" /></a></div>
+	<div id="TextNivel2" style="text-align: center"></div>
+</div>
+<div class="col-xs-3">&nbsp;</div>
+
+</div>
+<hr>
+<h1 class="text-center">¿Qu&eacute; est&aacute;s buscando?</h1>
+	<center><div id="Explicacion"></div></center>
+	<center><img src="" id="tableBanner" class="thumb"/></center>
+<!--AFEGIT RAFA-->
+
+
+
+<div id="parametre"></div>
+<!--
+<div class="row">
+	<div class="col-md-12 text-center"><label for="categoriaBase">¿ Qu&eacute; est&aacute;s buscando ?</label>
+		<input tyep="text"   name="categoriaBase" class="form-control" id="categoriaBase" readonly value=" ">
+		<input type="hidden" name="categoriaBaseID" class="form-control" id="categoriaBaseID" value=" ">
+		<input tyep="text"   name="categoriaNivel1" class="form-control" id="categoriaNivel1" readonly value=" ">
+		<input type="hidden" name="categoriaNivel1ID" class="form-control" id="categoriaNivel1ID" value=" ">
+		<input tyep="text"   name="categoriaNivel2" class="form-control" id="categoriaNivel2" readonly value=" ">
+		<input type="hidden" name="categoriaNivel2ID" class="form-control" id="categoriaNivel2ID" value=" ">
+	</div>
+</div>
+-->
+
+
+
+	
+<div class="row">
+		<div class="col-md-12 text-center">
+      <a href="insert_texto.html" class="btn btn-default massfh groddo  biff"><i class="fa fa-bell fa-2x" aria-hidden="true"></i><br />Explicaci&oacute;n</a>
+      <a href="inser_imagen.html" class="btn btn-default massfh groddo  biff"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br />Subir imagen</a>
+    </div>		
+</div>	
+
+
+
+<div class="row">
+	<div class="col-md-12" style="margin-top:20px;"><div class="thumbnail text-center" style="background-color:#d7ebbf;"><label for="precio"><h3 style="color:#000;">¿Cu&aacute;nto ofreces?</h3></label>
+		<input type="text" 	placeholder="Esciba aqu&iacute; la cantidad. Ejemplo: 52,50" name="precio" class="form-control" id="precio" value="" maxlength="4"> 
+	</div></div>
+</div>
+
+
+
+<div class="row">
+	<div class="col-md-12 ">
+<div id="sites" class="rowtootl">
+    <input type="radio" name="periodo" id="P3" value="3" /><label id="LP3" for="P3"><img src="img/marcador3.png" alt="" /></label>
+    <input type="radio" name="periodo" id="P6" value="6" />  <label id="LP6" for="P6"><img src="img/marcador6.png" alt="" /></label>
+    <input type="radio" name="periodo" id="P12" value="12" />    <label id="LP12" for="P12"><img src="img/marcador12.png" alt="" /></label>
+    <input type="radio" name="periodo" id="P24" value="24" />    <label id="LP24" for="P24"><img src="img/marcador24.png" alt="" /></label>
+</div>
+</div>
+</div>
+
+
+
+	
+<!--
+<div class="row">
+		<div class="col-md-12"><label for="categoria_custom">A&ntilde;ade cualquier detalle que nos ayude a entender mejor tu oferta</label><input type="text" name="categoria_custom" class="form-control" /></div>
+</div>
+-->
+	
+	
+<div class="row">
+		<div class="col-md-12 text-center">
+			<button type="submit" name="paso4" class="btn btn-default massfh verdot"><i class="fa fa-check fa-2x" aria-hidden="true"></i><br />Lanzar mi oferta</button>
+      <!--<a href="mis_subastas.html"><button class="btn btn-default massfh groddo"><i class="fa fa-bell fa-2x" aria-hidden="true"></i><br />Ver mis subastas</button></a>-->
+    </div>		
+</div>	
+	
+	
+	
+	
+</form>
+
+
+<div class="col-md-12 text-center"><div id="respuesta"><h3></h3></div></div>		
+
+
+
+<!--
+<div class="thumbnail  marginadorsupba">
+<div class="row">					
+<div class="col-xs-12 text-right">
+<form accept-charset="utf-8" id="dscto" method="POST">	
+<div class="input-group">
+<input name="busqueda" id="busqueda" value="" placeholder="Cercar events" autocomplete="off" class="form-control"  onKeyUp="buscar();" />
+   <span class="input-group-btn">
+        <div class="btn cdeed"><img class="alzadalupa" src="icones/search.svg" alt="search" /></div>
+   </span>
+</div>
+</form>
+</div>
+</div>						
+</div> 
+<div id="resultadoBusqueda"></div>
+
+-->
+ 
+<div id="div_Result2"></div>
+
+</div>
+
+          
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+	// Recuperamos datos del sessionStorage
+	var datosUsuario    = sessionStorage.getItem('datosUsuario');
+	var datosPassword   = sessionStorage.getItem('datosPassword');
+	var parametreBase   = sessionStorage.getItem('CategoriaBase'); // Recuperamos en qué categoría estamos	
+	var parametreNivel1	= sessionStorage.getItem('CategoriaNivel1');
+	var parametreNivel2	= sessionStorage.getItem('CategoriaNivel2');
+	var periodo			= sessionStorage.getItem('periodo');
+	var preu			= sessionStorage.getItem('precio');
+	var idsubasta		= sessionStorage.getItem('idsubasta');
+	var actualitzacio	= sessionStorage.getItem('actualitzacio');
+	
+	if(!datosUsuario || !datosPassword) { // Si no tiene definidos los códigos de usuario/password, vuelve a index
+		window.location.replace('index.html');
+	}
+
+	if(!parametreBase) { // Si no tiene definida la categoria base, vuelve a paso1
+		window.location.replace('segunda.html');
+	}
+
+	if(!parametreNivel1) { // Si no tiene definida la categoria base, vuelve a paso2
+		window.location.replace('paso2.html');
+	}
+
+	if(!parametreNivel2) { // Si no tiene definida la categoria base, vuelve a paso3
+		window.location.replace('paso3.html');
+	}
+
+	
+// Mostramos la explicacion	
+	$("#Explicacion").html('<em>'+sessionStorage.getItem('Explicacion')+'</em>');
+
+// Mostramos la imagen cargada
+	var img = sessionStorage.getItem('imgData');	
+    $("#tableBanner").attr('src', img);
+
+// Actualizamos precio y periodo
+	$("#precio").attr('value', preu);
+	switch (periodo) {
+		case '3': $("#P3").prop('checked', true); $("#LP3").addClass("selected");break;
+		case '6': $("#P6").prop('checked', true); $("#LP6").addClass("selected");break;
+		case '12': $("#P12").prop('checked', true); $("#LP12").addClass("selected");break;
+		case '24': $("#P24").prop('checked', true); $("#LP24").addClass("selected");break;
+	}
+		
+		
+// Si viene de una categoria con solo dos niveles, quitamos la última bola		
+	if (parametreNivel2==0) $("#tercerabola").hide();
+		
+		
+	// Inicialización de la pantalla
+	//
+	
+  	archivoValidacion = "http://elmundo.webexpo.es/procesos.php?jsoncallback=?";
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword, paso:4, Base:parametreBase, Nivel1:parametreNivel1, Nivel2:parametreNivel2})
+	.done(function(respuestaServer) {
+		if(respuestaServer.validacion != "ok") {
+			// Si no pasa la comprobación de usuario / contraseña, vuelve a la pantalla inicial
+			window.location.replace('index.html');
+		}
+		else {
+		// elegimos una imagen de fondo al azar
+			var randomID = new Date().getTime();
+			
+	// en index.php, se aplica sobre .ui-page		
+/*			$('.ui-page').css({
+				"background-image": "url('http://elmundo.webexpo.es/" + respuestaServer.ImagenDeFondo + "?r=" + randomID+ "')",
+				"background-repeat": "repeat",
+				"background-position": "top center"
+				}); 
+*/			
+			
+	// en segunda.php, se aplica sobre body, pero hace dos refrescos, uno ajustando ancho y otro ajustando alto. A mejorar		
+/*			$('body').css({
+				"background-image": "url('http://elmundo.webexpo.es/" + respuestaServer.ImagenDeFondo + "?r=" + randomID+ "')",
+				"background-repeat": "repeat",
+				"background-position": "top center"
+				});
+*/
+			
+	// elegimos un anuncio de pie al azar	
+	//		$("#bannerinferior").html('<img style="width:100%" src="' + respuestaServer.BannerPublicitario + '">');
+
+	// Recuperem descripció de la primera categoria
+			$.each(respuestaServer.Base, function(id, nombre){
+				$("#CatBase").attr("title", id);
+				$("#CatBase").attr("src", nombre);
+				$("#TextBase").html(id);
+			});
+
+	// Recuperem descripció de la segunda categoria
+			$.each(respuestaServer.Nivel1, function(id, nombre){
+				$("#CatNivel1").attr("title", id);
+				$("#CatNivel1").attr("src", nombre);
+				$("#TextNivel1").html(id);
+			});
+
+	// Recuperem descripció de la segunda categoria
+			$.each(respuestaServer.Nivel2, function(id, nombre){
+				$("#CatNivel2").attr("title", id);
+				$("#CatNivel2").attr("src", nombre);
+				$("#TextNivel2").html(id);
+			});
+		}
+	});
+	
+		
+	// Boton desconectar	
+	$("#closeapp_2").click(function() {
+	
+  	archivoValidacion = "http://elmundo.webexpo.es/validacion_de_datos.php?jsoncallback=?"
+
+	$.getJSON( archivoValidacion, {logout:1})
+	.done(function(respuestaServer) {
+		if(respuestaServer.validacion == "ok"){
+		 	/// si el logout es correcto, borramos el sessionStorage volvemos a inicio
+			sessionStorage.setItem('datosUsuario', null);
+			sessionStorage.setItem('datosPassword', null);
+			sessionStorage.setItem('CategoriaBase', null);	
+			sessionStorage.setItem('CategoriaNivel1', null);
+			sessionStorage.setItem('CategoriaNivel2', null);
+			sessionStorage.setItem('Explicacion', null);
+			sessionStorage.setItem('imgData', null);
+			
+			window.location.href="index.html";
+		}else{
+            alert('Por algun motivo tecnico, no podemos desconectar su sesion');
+			window.location.href="index.html";
+		}
+  
+	})
+	return false;		
+	});	
+		
+	// Boton desconectar	
+	$('#closeapp').submit(function() {	 
+		navigator.app.exitApp();
+	});		
+		
+
+	// Definim la acció del Submit	
+
+	$("#paso5").submit(function () {
+	// Registrem la subasta i anem a la pantalla final
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+	
+	// Hi han categories que només tenen 2 nivells	
+	var categoria 		= parametreNivel2;
+	if (parametreNivel2==0)		categoria = parametreNivel1;
+		
+	var descripcion		= sessionStorage.getItem('Explicacion');
+	var imgData			= sessionStorage.getItem('imgData');	
+	var precio			= $("#precio").val();
+	var periodo			= 0;
+	
+	if (document.getElementById('P3').checked) periodo = 3;
+	if (document.getElementById('P6').checked) periodo = 6;
+	if (document.getElementById('P12').checked) periodo = 12;
+	if (document.getElementById('P24').checked) periodo = 24;
+		
+		
+	if (precio<5 || precio >9999)
+		{
+		alert('¿ ' + precio + ' € ? ¿Es una broma? Puedes poner un precio de entre 5 y 10.000 euros a tu oferta');
+		return false;	
+		}
+	else
+		{
+
+// MODO GET, no podem passar la imatge, es massa gran o surten conflictes amb els codis.
+
+/*			
+		// creamos la subasta
+		var url="http://elmundo.webexpo.es/subastas.php";
+		url = url + "?usuario=" + datosUsuario + "&password=" + datosPassword + "&categoria=" + categoria + "&explicacion=" + descripcion + "&precio=" + precio + "&periodo=" + periodo + "&accion=crear" // &imagen=" + imgData; 
+
+//		alert(url);				
+//		return false;	
+
+		$.getJSON(url,function(mensaje, validacion){
+			if (validacion=='ok')
+				{
+				this.submit();
+				}
+			else
+				{
+				$('#respuesta').html = mensaje;
+				return false;	
+				}
+			}); 
+*/
+			
+// MODE AMB POST
+
+		// Marquem si es una actulització o una creació
+		if (actualitzacio==1)
+			postData = "&accion=modificar&idsubasta=" + idsubasta;
+		else	
+			postData = "&accion=crear";
+
+		postData = postData + "&usuario=" + datosUsuario + "&password=" + datosPassword + "&categoria=" + categoria + "&explicacion=" + descripcion + "&precio=" + precio + 
+		"&periodo=" + periodo + "&imagen=" + imgData; 
+
+			
+		if (actualitzacio==1)
+			postData2 = {'accion': 'modificar', 'idsubasta':  idsubasta, 'usuario': datosUsuario, 'password': datosPassword, 'categoria': categoria, 'explicacion':  descripcion, 'precio': precio, 'periodo': periodo, 'imagen': imgData };
+		else	
+			postData2 = {'accion': 'crear', 'usuario': datosUsuario, 'password': datosPassword, 'categoria': categoria, 'explicacion':  descripcion, 'precio': precio, 'periodo': periodo, 'imagen': imgData };
+
+			
+//		alert (postData);
+			
+			
+		var resultado = "";
+			
+		$.ajax({
+			  type: 'POST',
+			  dataType : "json",
+			  data: postData2,
+			  url: 'http://elmundo.webexpo.es/subastas.php',
+			  async : false,
+			  success: function(data){
+				  resultado = data;
+			  },
+			  error: function(xhr, ajaxOptions, thrownError){
+				  alert('El proces ha tornat un error: ' + xhr.status + " " + thrownError);
+				  return false;
+			  }
+		  });
+   
+
+		  if (resultado.validacion != 'ok')
+			  {
+			  alert('Se ha producido un error, ' + resultado.mensaje);
+			  return false;
+			  }
+		}
+	});
+});
+</script>          
+          
+         
+<script type="text/javascript">
+
+$(document).ready(function(){
+                    
+var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+var response_url 	= sessionStorage.getItem('response.url');
+var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+ //if (response_estado==1){                           
+
+/* 
+
+$("#div_Result").html("<a href=\"index.html\" onClick=\"sessionStorage.clear(); return true;\" >"+response_nom+" "+response_cognom+" <img style=\"width:17px;float:right;margin-right:25px;margin-top:12px;\" src=\"icones/exit.svg\" alt=\"SORTIR\" title=\"SORTIR\" /></a>	 "	);
+                   
+
+			                       
+			                       
+	                               //una vez logeados mostramos el JSON del array recuperado de la bbdd
+                                      var url="http://elmundo.webexpo.es/rebote.php";
+			                           $("#div_Result2").html("");
+			                           $.getJSON(url,function(clientes){
+									   
+									   var contenido = "<form><input type='hidden' name='idusuari' id='idusuari' value='"+response_id+"'/>";
+									   
+									   var newRow =	"";
+									   									   
+			                           $.each(clientes, function(i,cliente){
+			                           newRow = newRow + 
+"<div class='thumbnail'><div class='row martup'><div class='col-xs-12'><div class='cropp'><img class='percent ' src=http://elmundo.webexpo.es/fotos/"+cliente.fotografia+" /></div></div><div class='col-xs-12 jshue'><h2>"+cliente.titol+"</h2><p class='datel'>"+cliente.data+" - "+cliente.hora+"</p>"+cliente.texte+"<p>&nbsp;</p><p>&nbsp;<input type='submit' name='detallID"+cliente.id+"' id='detallID"+cliente.id+"' value='"+cliente.id+"' /></p><p>&nbsp;</p></div></div></div>"                           
+			                           });
+									   contenido = contenido + newRow + "</form>";
+									   
+			                           $(contenido).appendTo("#div_Result2");
+			                           });	
+			                           
+			                           
+			                                                  
+//  } else {//si 0 porque no se pudo elimnar
+//    window.location.href = 'index.html';
+//}                            
+             
+*/
+		
+});
+</script>
+
+
+<!--
+<script>
+  $(function () {
+	$('form').bind('click', function (event) {
+
+	event.preventDefault();// using this page stop being refreshing 
+
+	  $.ajax({
+		type: 'POST',
+		url: 'http://elmundo.webexpo.es/detall.php',
+		data: $('form').serialize(),
+		success: function () {
+//		 alert('hate me tomorrow');
+		}
+	  });
+
+	});
+  });
+</script> 
+-->
+
+<script type="text/javascript">
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+
+	
+
+
+
+
+<script>
+	$(document).ready(function() {
+    $("#resultadoBusqueda").html('');
+});
+
+function buscar() {
+    var textoBusqueda = $("input#busqueda").val();
+ 
+     if (textoBusqueda != "") {
+        $.post("http://elmundo.webexpo.es/buscar.php", {valorBusqueda: textoBusqueda}, function(mensaje) {
+            $("#resultadoBusqueda").html(mensaje);
+         }); 
+     } else { 
+        $("#resultadoBusqueda").html('');
+        };
+};
+</script>
+
+<script>
+$(document).ready(function() {
+    $("#dscto").keypress(function(e) {
+        if (e.which == 13) {
+            return false;
+        }
+    });
+});
+</script>
+
+
+<script>
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+ 
+
+function MostrarConsulta(datos){
+   divResultado = document.getElementById('resultado');
+   ajax=objetoAjax();
+   ajax.open("GET", datos);
+   ajax.onreadystatechange=function() {
+      if (ajax.readyState==4) {
+         divResultado.innerHTML = ajax.responseText
+      }
+   }
+   ajax.send(null)
+}
+</script>
+
+
+
+<script>
+$('#sites input:radio').addClass('input_hidden');
+$('#sites label').click(function() {
+    $(this).addClass('selected').siblings().removeClass('selected');
+});
+
+
+</script>
+
+
+
+
+
+
+<script>
+$('#detallID').submit(function(){
+
+
+  var postData = $(this).serialize();
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData,
+
+      url: 'http://elmundo.webexpo.es/detall.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+
+
+$(document).ready(function(){
+    var classCycle=['fons1','fons2','fons3','fons4','fons5'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('body').addClass(classToAdd);
+
+});
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
