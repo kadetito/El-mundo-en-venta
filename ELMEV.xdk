@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/sample-cordova-starter-app/sample.zip",
       "projectGuid": "95f80c09-85fa-4c00-a565-27edcd00a912",
-      "lastModifiedDate": 1549968236686,
+      "lastModifiedDate": 1554315720593,
       "creationDate": 1505664091160
     },
     "sourceDirectory": "www",
